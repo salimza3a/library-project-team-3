@@ -13,121 +13,97 @@
     box-sizing: inherit;
 }
 
-
-.all-books-and-scroll {
+body{
+    background:  #E5E5E5;;
+}
+header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  
 }
-.scroll-bar ul {
-   width: 400px;
-   overflow-x: auto;
-   display: flex;
-   align-items: center;
-   height: 60px;
-     margin-top: 30px;
-
-}
-
-.scroll-bar ul li{
-   list-style-type: none;
-   margin-right: 10px;
-   
-   
-}
-
-.scroll-bar li a {
-    font-size: 15px;
-    height: 30px;
+#navbar{
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 30px;
-    border-radius: 20px;
-    background-color: #eee;
-    color: #333;
-    white-space: nowrap;
-    text-decoration: none;
-    transition: all .2s;
+}
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar ul li {
+    list-style: none;
+    margin: 20px;
+    font-size: 12px;
+    color: #241400;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+#navbar ul li:first-child{
+    color: #E16A00;
+    font-weight: 700;
+    font-size: 12px;
+}
+#library{
+    display: flex;
+    justify-content: space-between;
+}
+#library 
+#joinUs{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-.scroll-bar li a:hover {
-    background-color: aquamarine;
-}
-
-/* Previouis and Next buttons */
-
-
-.all-books-slider {
-    position: relative;
-}
-
-.prevBtn,.prevBtn-two,.prevBtn-three {
-    position: absolute;
-    top: 50%;
-    left: 0;
+#leftside{
+    border: 1px solid black;
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    margin-top: 50px;
     
 
 }
-.prevBtn i,.prevBtn-two i,.prevBtn-three i  {
-    font-size: 25px;
+
+#leftside h2{
+    font-weight: 900;
 }
-
-.nextBtn,.nextBtn-two,.nextBtn-three {
-    position: absolute;
-    top: 50%;
-    right: 0;
-}
-
-.nextBtn i,.nextBtn-two i,.nextBtn-three i {
-    font-size: 25px;
-}
-
-
-/* In Card */
-
-.card-title {
-    font-size: 1.4rem;
-}
-
-.card-text {
-    font-size: 1.2rem;
-}
-
-.card a {
-    background-color:#E16A00 ;
-    font-size: 1.2rem ;
-    color: #fff
-}
-
-.card img {
-    height: 12rem;
-}
-
-
-.new-icon {
-    position: relative;
-}
-
-.new-icon span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #EB5757;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 2px;
-    padding: 2px;
+#leftside p{
+    font-weight: 400px;
+    font-size: 13px;
+   width: 370px;
+   height: 60px;
+   border: 1px solid black;
 
 }
+#leftside button{
+    width: 212px;
+    height: 50px;
+    background-color: #E16A00;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 900;
+}
 
-/* BestSeller  */
+.container{
+    background: #FFFAF5;
+}
 
-.bestseller-books h2,
-.release-books h2 {
-    font-size: 25px ;
-    font-weight: 700;
+#catalog{
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    background-color: #241400;
+    width: 798px;
+    height: 396px;
+    border: 1px solid black;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#line1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
 }
