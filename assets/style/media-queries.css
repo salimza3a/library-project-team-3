@@ -1,6 +1,7 @@
 /* index.html */
 @media screen and (min-width: 1200px) {
     
+
     .numbers-of-data {
         display: flex;
         flex-wrap: wrap;
@@ -237,6 +238,22 @@
         
     
     }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    
+
+
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+    
 
 }
 

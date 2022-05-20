@@ -1,3 +1,4 @@
+
 /* Global */
 a:hover{
     text-decoration: none;
@@ -8,6 +9,8 @@ a:hover{
     width: 80%;
     margin: 0 auto;
 }
+
+
 /* Generals */
 html{
     box-sizing: border-box;
@@ -55,8 +58,6 @@ nav ul li .active {
     margin-left: 8px;
     color: var(--color-black)
 }
-
-/* Section One */
 
 .section-one {
     display: flex;
@@ -286,6 +287,12 @@ footer p {
     font-weight: 400;
     text-align: center;
     color: var(--color-white);
+
+    padding: 1.2rem
+}
+.main-box{
+    display: flex;
+    justify-content: space-between;
     padding: 1.2rem;
     margin-bottom: 0;
 }
