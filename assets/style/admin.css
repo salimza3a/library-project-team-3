@@ -125,3 +125,7 @@ a:hover{
 .admin-area{
     background-color: #FFF;
 }
+
+.admin-panel{
+    display: none !important;
+}
