@@ -107,3 +107,7 @@ header{
     align-items: center;
     margin: 10px;
 }
+.main-box{
+    display: flex;
+    justify-content: space-between;
+}
