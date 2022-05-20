@@ -4,7 +4,10 @@ a:hover{
     text-shadow: 0 0 1px #000;
 }
 
-
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 /* Generals */
 html{
     box-sizing: border-box;
@@ -35,7 +38,10 @@ nav li {
 nav ul li a {
     margin: 2rem;
     font-size: 1.2rem;
-    color: var(--color-black)
+    color: var(--color-black);
+    white-space: nowrap;
+
+    
 }
 
 nav ul li .active {
@@ -103,7 +109,7 @@ nav ul li .active {
 
 /* Section two */
 .section-two {
-    width: 61%;
+    width: 81%;
     margin: 0 auto;
     margin-top: 6.6rem;
     margin-bottom: 6rem;
@@ -158,15 +164,15 @@ nav ul li .active {
 
 .numbers-of-data {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 
 .numbers-of-data .same-values-part-one {
-    font-size: 5rem;
+    font-size: 3rem;
     line-height: 9.8rem;
     font-weight: 900;
     color: var(--color-black);
-    margin-right: 2.7rem;
+    margin-right: 7px;
     vertical-align: middle;
 
 }
@@ -175,6 +181,8 @@ nav ul li .active {
     font-size: 1.3rem;
     line-height: 2.5rem;
     font-weight: 400;
+    margin-left: 7px ;
+
 }
 
 .section-four {
@@ -280,4 +288,8 @@ footer p {
     color: var(--color-white);
     padding: 1.2rem;
     margin-bottom: 0;
+}
+
+.hamburger {
+    display: none;
 }
