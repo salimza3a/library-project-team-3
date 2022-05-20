@@ -278,6 +278,12 @@ footer p {
     font-weight: 400;
     text-align: center;
     color: var(--color-white);
+
+    padding: 1.2rem
+}
+.main-box{
+    display: flex;
+    justify-content: space-between;
     padding: 1.2rem;
     margin-bottom: 0;
 }
