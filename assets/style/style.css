@@ -5,6 +5,7 @@
      box-sizing: border-box;;
      font-size: 62.5%; 
      height: 100%;
+    
  }
 
 *,
@@ -90,10 +91,7 @@ nav ul li .active {
 }
 
 
-/* Section One */
- main {
-     height: 100vh ;
- }
+
 
  .section-one {
      display: flex;
@@ -261,7 +259,8 @@ nav ul li .active {
 footer {
     margin-top: 5rem;
     background-color: var(--color-brown);
-   margin-top: auto;
+    
+   
 
 }
 
