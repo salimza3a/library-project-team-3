@@ -98,9 +98,7 @@ $(document).ready(function () {
             return true;
         }
     }
-
-
-
+    
     //admin panel
 
 });
