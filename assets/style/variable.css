@@ -1,8 +1,10 @@
- 
  :root {
-     --main-font: font-family: 'Montserrat', sans-serif;
+     --main-font: 'Montserrat', sans-serif;
+     --roboto-font-weight-400: 'Roboto', sans-serif;
      --color-red: #720418;
      --color-orange: #E16A00;
      --color-white: #FFFFFF;
      --color-brown: #391F00;
- } 
+     --color-background: #E5E5E5;
+     --color-black: #241400;
+ }
