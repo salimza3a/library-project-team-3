@@ -1,5 +1,15 @@
 /* index.html */
 
+@media screen and (max-width: 1000px) {
+    #hamburger-btn{
+        display: block;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 /* catalog.html */
 

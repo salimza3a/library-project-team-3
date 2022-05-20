@@ -6,51 +6,13 @@ a:hover{
 
 
 /* Generals */
+
 html{
     box-sizing: border-box;
-    font-size: 80.5%;
-    height: 100%;
+    font-size: 80%;
 }
 body { font-family: var(--main-font); }
 
-
-/* Header Design */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav li {
-    list-style-type: none;
-}
-
-nav ul li a {
-    margin: 2rem;
-    font-size: 1.2rem;
-    color: var(--color-black)
-}
-
-nav ul li .active {
-    color: #E16A00;
-    font-weight: 700;
-}
-
-
-.join-us span {
-    font-size: 400;
-    margin-left: 8px;
-    color: var(--color-black)
-}
-
-/* Section One */
 
 .section-one {
     display: flex;
@@ -59,17 +21,9 @@ nav ul li .active {
     margin-top: 9rem;
 }
 
-.left-side {
-    flex: 1;
+.left-side {flex: 1;}
 
-}
-
-.right-side {
-    flex: 1;
-
-}
-
-
+.right-side {flex: 1;}
 
 .left-side h2 {
     font-size: 3.6rem;
@@ -220,64 +174,4 @@ nav ul li .active {
     width: 8rem;
     height: 8rem;
     margin: 0 5.4rem;
-}
-
-/* Footer */
-
-footer {
-    margin-top: 70px;
-    background-color: var(--color-brown);
-}
-
-.footer-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.footer-left-side {
-    display: flex;
-}
-
-.footer-left-side img {
-    color: green
-}
-
-.footer-right-side {
-    display: flex;
-    margin-top: 5.6rem;
-}
-
-.footer-right-side ul {
-    margin-right: 5rem;
-}
-
-.footer-right-side li {
-    list-style-type: none;
-}
-
-.footer-right-side li:first-child {
-    font-size: 1.8rem;
-    line-height: 3.5rem;
-    font-weight: 400;
-}
-
-.footer-right-side li a {
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-    font-weight: 400;
-    color: var(--color-white);
-}
-
-footer p {
-    font-size: 1.2rem;
-    line-height: 2.3rem;
-    font-weight: 400;
-    text-align: center;
-    color: var(--color-white);
-    padding: 1.2rem;
-    margin-bottom: 0;
 }
