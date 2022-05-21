@@ -3,3 +3,4 @@
 @import url("./footer.css");
 @import url("./media-queries.css");
 body{background-color: #E5E5E5;}
+main{min-height: 100vh;}
