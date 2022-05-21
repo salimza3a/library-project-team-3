@@ -6,4 +6,4 @@ const db = {
     storageBucket: "team4-bookstore.appspot.com",
     messagingSenderId: "856410807514",
     appId: "1:856410807514:web:eb80b1d21b926175b9d9e3"
-  };
+};
