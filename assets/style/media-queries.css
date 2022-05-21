@@ -2,7 +2,7 @@
 @media screen and (min-width: 1200px) {}
     
 
-<<<<<<< HEAD
+
 
 @media screen and (max-width: 1000px) {
     #hamburger-btn{
@@ -14,8 +14,6 @@
         align-items: center;
     }
 
-=======
->>>>>>> 8ac91916af1960b0f909fac80e288c91f3109205
     .numbers-of-data {
         display: flex;
         flex-wrap: wrap;
