@@ -1,12 +1,23 @@
 /* index.html */
-@media screen and (min-width: 1200px) {
-    
+@media screen and (max-width: 992px) {
+    header{
+        margin-top: 16px;
+    }
+    #header nav{
+        display: none;
+    }
+    #hamburger-btn{
+        display: inline-block;
+    }
+    #join-btn span{
+        display: none;
+    }
 }
+
 
 /* catalog.html */
 
 @media screen and (max-width: 480px) {
-    
     .all-books-and-scroll {
         display: flex;
         flex-direction: column;
