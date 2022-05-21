@@ -6,7 +6,7 @@ function processForm(event) {
 
     let name = $('#join-us-personal-name').val();
     let email = $('#join-us-personal-email').val();
-    
+
     if (!name) {
         failBox.text('Name is empty!');
         failBox.fadeIn(600);
@@ -21,7 +21,7 @@ function processForm(event) {
         failBox.addClass('alert-danger');
         return;
     }
-    if(!name && !email){
+    if (!name && !email) {
         failBox.text('Email & Name are empty!');
         failBox.fadeIn(600);
         failBox.fadeOut(2500);
@@ -69,4 +69,10 @@ $('#hamburger-btn').on('click', () => {
 
 $('#close-mobile-view').on('click', () => {
     $('.mobile-view').hide(500)
+});
+
+// pagination function
+$(".header-item").click(function () {
+    $(".header-item").removeClass("current");
+    $(this).addClass("current");
 });
