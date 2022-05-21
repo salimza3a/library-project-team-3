@@ -1,0 +1,15 @@
+body{
+     
+    background-color: #FFFAF5;
+}
+main{
+    margin: 100px 0;
+}
+.section-five{
+    margin-top: 200px;
+}
+
+#content p{
+    color: #241400;
+    font-size: 18px;
+}

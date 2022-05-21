@@ -7,6 +7,10 @@ a:hover{
     text-decoration: none;
 }
 
+/* this two classes for showing and hiding panels and smooth effect */
+.show{display: block !important;}
+.hide{display: none !important;}
+
 
 /* Admin login. */
 .admin-login-area {
@@ -62,16 +66,21 @@ a:hover{
     width: 80%;
     display: none;
 }
+<<<<<<< HEAD:assets/style/admin.css
 /* .hide{display: none;} */ 
+=======
+
+>>>>>>> 4f812d2a824fe24a03e07f313670c205edd9f3ce:assets/css/admin.css
 
 /* Admin login end. */
+
+/* ================ */
 
 
 /* Admin Control panel */
 
 .admin-area{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     background-color: #FFF;
 }
 
@@ -82,7 +91,7 @@ a:hover{
 
 .right-shortcut{
     width: 20%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--color-red);
 }
 .main{
