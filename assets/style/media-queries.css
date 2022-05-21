@@ -4,6 +4,7 @@
 
 
 
+
 @media screen and (max-width: 1000px) {
     #hamburger-btn{
         display: block;
@@ -315,7 +316,7 @@
 }
 @media screen and (max-width: 640px){
     .admin-form{
-        margin-top: 94px;
+        margin-top: 20%;
         width: 90%;
     }
     .admin-form #header{
