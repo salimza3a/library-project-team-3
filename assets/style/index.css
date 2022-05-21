@@ -20,8 +20,7 @@ html{
 body { font-family: var(--main-font); }
 
 
-<<<<<<< HEAD:assets/style/index.css
-=======
+
 /* Header Design */
 header {
     display: flex;
@@ -61,7 +60,7 @@ nav ul li .active {
     color: var(--color-black)
 }
 
->>>>>>> d6e3bb42b89d40987277ecfdc6339732be73fe1b:assets/style/style.css
+
 .section-one {
     display: flex;
     justify-content: space-between;
@@ -224,8 +223,7 @@ nav ul li .active {
     width: 8rem;
     height: 8rem;
     margin: 0 5.4rem;
-<<<<<<< HEAD:assets/style/index.css
-=======
+
 }
 
 /* Footer */
@@ -296,5 +294,5 @@ footer p {
 
 .hamburger {
     display: none;
->>>>>>> d6e3bb42b89d40987277ecfdc6339732be73fe1b:assets/style/style.css
+
 }
