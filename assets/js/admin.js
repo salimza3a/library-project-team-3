@@ -91,7 +91,7 @@ $(document).ready(function () {
             failBox.fadeOut(1800);
         }
     });
-    
+
     function charLimit(count) {
         if (count.length >= 15) {
             return true;
@@ -108,6 +108,6 @@ $(document).ready(function () {
     // MAIN CODES HERE, BOOK API + FIREBASE
     //====================================
     
-
+    
     //const db = firebase.init(app);
 });
