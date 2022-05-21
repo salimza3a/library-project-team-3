@@ -1,4 +1,4 @@
-/* index.html */
+/* tablets */
 @media screen and (max-width: 992px) {
     header{
         margin-top: 16px;
@@ -12,12 +12,16 @@
     #join-btn span{
         display: none;
     }
+    .admin-form{
+        width: 60%;
+    }
+    
 }
 
 
-/* catalog.html */
+/* mobile */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px){
     .all-books-and-scroll {
         display: flex;
         flex-direction: column;
@@ -28,26 +32,7 @@
     .scroll-bar ul {
         height: 40px;
     }
-    
-}
 
-/* search.html */
-
-
-/* contact.html */
-
-
-/* about.html */
-
-
-/* admin.html */
-
-@media screen and (max-width: 1200px) {
-    .admin-form{
-        width: 60%;
-    }
-}
-@media screen and (max-width: 640px){
     .admin-form{
         margin-top: 94px;
         width: 90%;

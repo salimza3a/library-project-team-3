@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <!-- Header-START -->
     <header>
         <!-- Desktop View-menu -->
@@ -75,8 +76,10 @@
                     </h2>
                     <form action="#">
                         <div class="join-form-items d-flex flex-column mt-3 py-3 px-5">
-                            <input type="text" class="py-3 px-2 mb-3" id="join-us-personal-name" placeholder="Full Name" required maxlength="20">
-                            <input type="email" class="py-3 px-2 mb-5" id="join-us-personal-email" placeholder="Email" required maxlength="35">
+                            <input type="text" class="py-3 px-2 mb-3" id="join-us-personal-name" placeholder="Full Name"
+                                required maxlength="20">
+                            <input type="email" class="py-3 px-2 mb-5" id="join-us-personal-email" placeholder="Email"
+                                required maxlength="35">
                             <button type="submit" class="btn mb-3 py-3 px-2" id="join-submit-btn">Join</button>
                         </div>
                     </form>
@@ -86,6 +89,7 @@
         </div>
     </header>
     <!-- Header-END -->
+
 
 
     <!-- Main-START -->
@@ -98,7 +102,72 @@
 
     <!-- Footer-START -->
     <footer>
+        <div class="social-bar">
+            <h2 id="header">
+                Follow us on social media
+            </h2>
+            <div class="social-bar-items">
+                <a href="#"><img src="./assets/images/icons/fb.svg" alt="Facebook"></a>
+                <a href="#" class="mx-5"><img src="./assets/images/icons/twitt.svg" alt="Twitter"></a>
+                <a href="#"><img src="./assets/images/icons/insta.svg" alt="Instagram"></a>
+            </div>
+        </div>
 
+        <div class="footer-main-area">
+            <div class="container">
+                <div id="main-footer-area">
+                    <div class="logo">
+                        <img src="./assets/images/logoWhite.svg" alt="Logo">
+                    </div>
+                    <div class="links">
+                        <nav>
+                            <h5 class="link-header">
+                                Popular
+                            </h5>
+                            <ul>
+                                <li><a href="#">Programming</a></li>
+                                <li><a href="#">Books for children</a></li>
+                                <li><a href="#">Psychology</a></li>
+                                <li><a href="#">Business</a></li>
+                            </ul>
+                        </nav>
+                        <nav id="middle">
+                            <h5 class="link-header">
+                                Cash
+                            </h5>
+                            <ul>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Payment</a></li>
+                                <li><a href="./about.html">About the store</a></li>
+                            </ul>
+                        </nav>
+                        <nav>
+                            <h5 class="link-header">
+                                Help
+                            </h5>
+                            <ul>
+                                <li><a href="./contact.html">Contacts</a></li>
+                                <li><a href="#">Purchase returns</a></li>
+                                <li><a href="./about.html">Buyer Help</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+                <div class="mobile-view">
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./catalog.html">Catalog</a></li>
+                            <li><a href="./about.html">About Store</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="./search.html">Search</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="text-center text-white pt-5 pb-3">EACAMP TEAM-3 | © 2022 All rights reserved</div>
+            </div>
+        </div>
     </footer>
     <!-- Footer-END -->
 
@@ -117,9 +186,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
     <!-- header.js -->
     <script src="./assets/js/header.js"></script>
     <!-- firebase -->
     <script src="./assets/js/db.js"></script>
 </body>
+
 </html>
