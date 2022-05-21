@@ -1,14 +1,8 @@
-//1. check local storage if user already logged+[done]
-
-//2. otherwise get userName&password from input and compare+[done]
-
-//3. get admin password and username from Database-[fail yet]
-
-
-//login checking
-
-
 $(document).ready(function () {
+    //  =========================
+    //   LOGIN PROCESSING CODES.
+    // ==========================
+
     const testUsername = "admin";
     const testPassword = 'team3';
     const failBox = $('#fails-box');
@@ -19,7 +13,10 @@ $(document).ready(function () {
         if (isHave !== null) {
             document.title = 'Welcome to Admin Page'
             directLogin();
+            return;
         }
+        $('.admin-login-area').removeClass('hide');
+        $('.admin-login-area').addClass('show');
     }
     checkLocal();
 
@@ -33,13 +30,13 @@ $(document).ready(function () {
                 failBox.addClass('alert-danger');
                 failBox.text('Username & Password wrong!');
                 failBox.fadeIn(400);
-                setTimeout(() => failBox.fadeOut(900), 1300);
+                failBox.fadeOut(1800);
                 return;
             } else {
                 failBox.addClass('alert-danger');
                 failBox.text('Username wrong!');
                 failBox.fadeIn(400);
-                setTimeout(() => failBox.fadeOut(900), 1300);
+                failBox.fadeOut(1800);
                 return;
             }
         } else if (password !== testPassword) {
@@ -47,14 +44,14 @@ $(document).ready(function () {
                 failBox.addClass('alert-danger');
                 failBox.text('Username & Password wrong!');
                 failBox.fadeIn(400);
-                setTimeout(() => failBox.fadeOut(900), 1300);
+                failBox.fadeOut(1800)
                 return;
             } else {
                 failBox.addClass('alert-danger');
                 failBox.text('Password wrong!');
                 failBox.fadeIn(400);
-                setTimeout(() => failBox.fadeOut(900), 1300);
-                return
+                failBox.fadeOut(1800);
+                return;
             }
         }
         localStorage.setItem('isLogged', true);
@@ -62,15 +59,17 @@ $(document).ready(function () {
     }
 
     $('#login-btn').on('click', checkLoginInformations);
-
+    
     function login() {
         $('.admin-login-area').html('');
-        $('.admin-login-area').fadeOut(400);
-        $('.admin-panel').fadeIn(400);
+        $('.admin-login-area').addClass('hide');
+        $('.admin-panel').addClass('show');
     }
 
     function directLogin() {
-        $('.admin-panel').fadeIn(400);
+        $('.admin-login-area').html('');
+        $('.admin-login-area').hide(100);
+        setTimeout(() =>$('.admin-panel').addClass('show'), 1000);
     }
 
     $('#userName').on('input', function () {
@@ -79,7 +78,7 @@ $(document).ready(function () {
             failBox.text('Username length greater than 15');
             failBox.fadeIn(400);
             this.value = '';
-            setTimeout(() => failBox.fadeOut(900), 1300);
+            failBox.fadeOut(1800);
         }
     });
 
@@ -89,16 +88,26 @@ $(document).ready(function () {
             failBox.text('Password length greater than 15');
             failBox.fadeIn(400);
             this.value = '';
-            setTimeout(() => failBox.fadeOut(900), 1300);
+            failBox.fadeOut(1800);
         }
     });
-
+    
     function charLimit(count) {
         if (count.length >= 15) {
             return true;
         }
     }
-    
-    //admin panel
 
+    //  ================================
+    //   LOGIN PROCESSING FULLY COMPLETE.
+    // ==================================
+
+    //=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+    // ===================================
+    // MAIN CODES HERE, BOOK API + FIREBASE
+    //====================================
+    
+
+    //const db = firebase.init(app);
 });
