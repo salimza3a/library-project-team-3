@@ -1,0 +1,324 @@
+/* index.html */
+@media screen and (min-width: 1200px) {
+    
+
+    .numbers-of-data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .numbers-of-data .same-values-part-one {
+        
+        
+        font-size: 5rem;
+        line-height: 5.8rem;
+        margin-bottom: 2rem;
+       
+   
+    
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    nav ul li a {
+        margin: 1rem;
+        font-size: 1.2rem;
+        color: var(--color-black);
+        white-space: nowrap;
+
+        
+    }
+    .numbers-of-data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .numbers-of-data .same-values-part-one {
+        font-size: 5rem;
+        line-height: 5.8rem;
+        margin-right: .5px;
+        margin-bottom: 2rem;
+       
+   
+    
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav ul li, .join-us span {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+    .section-one {
+
+        margin-top: 1.5rem ;
+    }
+    .left-side h2 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .left-side p {
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.9rem;
+        margin-right: 5px;
+    }
+    .left-side a {
+        margin-right: 1.2rem; 
+        max-width: 100%; 
+        display: block;
+    }
+    
+    /* Catalog Section */
+    .catalog-names .specific-catalog {
+        width: 45%;
+        margin-bottom: 1.5rem;
+        padding: 2rem ;
+
+    }
+
+    /* About Store Section */
+
+    
+    .numbers-of-data {
+        display: flex;
+        flex-direction: column;
+       text-align: center;
+    }
+    
+    .numbers-of-data .same-values-part-one {
+        font-size: 5rem;
+        line-height: 6.8rem;
+        margin-right: 1.5rem;
+       
+   
+    
+    }
+    /* Delivery Section */
+    .section-four {
+        margin-bottom: 1.2rem;
+    
+    }
+    
+    .section-four p {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+    }
+
+    /* Social Media Section */
+    .section-five {
+        margin-top: 5rem;
+    
+    }
+    
+    .section-five h2 {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+    }
+    
+    .section-five .social-medias {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-medias img {
+        width: 4.1rem;
+        height: 3.2rem;
+        margin: 0 2.5rem;
+    }
+
+    .footer-container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+       
+        
+    
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    nav ul li, .join-us span {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .section-one {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem ;
+    }
+    .left-side h2 {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: var(--color-black);
+        margin-bottom: 2.5rem;
+    }
+    
+    .left-side p {
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        margin-bottom: 3.9rem;
+    }
+    .left-side a {
+        margin-bottom: 5rem; 
+        width: 100%; 
+        display: block;
+    }
+    /* Catalog Section */
+    .catalog-names .specific-catalog {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+    }
+
+    /* About Store Section */
+
+    
+    .numbers-of-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .numbers-of-data .same-values-part-one {
+        font-size: 4rem;
+        line-height: 6.8rem;
+   
+    
+    }
+    /* Delivery Section */
+    .section-four {
+        margin-bottom: 1.2rem;
+    
+    }
+    
+    .section-four p {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+    }
+
+    /* Social Media Section */
+    .section-five {
+        margin-top: 5rem;
+    
+    }
+    
+    .section-five h2 {
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+    }
+    
+    .section-five .social-medias {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-medias img {
+        width: 4.1rem;
+        height: 3.2rem;
+        margin: 0 2.5rem;
+    }
+
+    .footer-container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+       
+        
+    
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    
+
+
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+
+}
+
+/* catalog.html */
+
+@media screen and (max-width: 480px) {
+    
+    .all-books-and-scroll {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+    }
+    
+    .scroll-bar ul {
+        height: 40px;
+    }
+    
+}
+
+/* search.html */
+
+
+/* contact.html */
+
+
+/* about.html */
+@media screen and(max-width: 486px) {
+    
+
+
+
+    
+}
+
+
+
+
+
+
+/* admin.html */
+
+@media screen and (max-width: 1200px) {
+    .admin-form{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 640px){
+    .admin-form{
+        margin-top: 94px;
+        width: 90%;
+    }
+    .admin-form #header{
+        font-size: 24px;
+        margin-top: 24px;
+    }
+    #login-btn{
+        font-size: 18px;
+    }
+    #userName,
+    #login-btn,
+    #password{
+        width: 90%;
+    }
+    #password{
+        margin-bottom: 24px;
+    }
+}
