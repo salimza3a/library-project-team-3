@@ -1,4 +1,3 @@
-
 body{
      
     background-color: #FFFAF5;
@@ -9,41 +8,7 @@ main{
 .section-five{
     margin-top: 200px;
 }
-/* #main-box{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
 
-#left-side{
-    margin-right: 80px;
-    margin-top: 50px;
-    width: 686px;
-    height: 253px;
-}
-#left-side #content {
-    border: 1px solid black;
-}
-#left-side #content p{
-    color: #241400;
-    font-weight: 400;
-    font-size: 18px;
-}
-
-#left-side #title1 h2{
-    color:#241400;
-    font-weight: 900;
-    font-size: 36px;
-}
-
-#right-side{
-    width: 570px;
-    height: 310px;
-    border: 1px solid black;
-    margin-right: 80px;
-    margin-top: 50px;
-} */
 #content p{
     color: #241400;
     font-size: 18px;

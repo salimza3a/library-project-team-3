@@ -7,6 +7,10 @@ a:hover{
     text-decoration: none;
 }
 
+/* this two classes for showing and hiding panels and smooth effect */
+.show{display: block !important;}
+.hide{display: none !important;}
+
 
 /* Admin login. */
 .admin-login-area {
@@ -62,6 +66,8 @@ a:hover{
 
 
 /* Admin login end. */
+
+/* ================ */
 
 
 /* Admin Control panel */
@@ -128,5 +134,3 @@ a:hover{
 .admin-panel{
     display: none !important;
 }
-.show{display: block !important;}
-.hide{display: none !important;}
