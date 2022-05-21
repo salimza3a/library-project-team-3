@@ -1,0 +1,119 @@
+header {
+    margin-top: 31px;
+    padding-bottom: 20px;
+    border-bottom: 0.1px solid #e0e0e0;
+    font-family: var(--main-font);
+    position: relative;
+}
+
+#header li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 21px;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#header a {
+    color: var(--color-black);
+    transition: all 200ms;
+}
+
+#header a:hover {
+    text-decoration: none;
+    color: var(--color-orange);
+}
+
+.current {
+    font-weight: bold;
+    color: var(--color-orange) !important;
+}
+
+#join-btn,
+#hamburger-btn,
+#join-btn span {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 250ms;
+}
+
+#join-btn:hover span {
+    color: var(--color-orange);
+}
+
+#header .line {
+    width: 25px;
+    height: 3.95px;
+    background-color: var(--color-black);
+}
+
+#header .line:nth-child(2) {
+    margin: 6.58px 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+#join-submit-btn {
+    background: var(--color-orange);
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    color: var(--color-white);
+}
+
+/* Mobile view menu */
+
+#hamburger-btn{
+    display: none;
+}
+
+.mobile-view{    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -31px;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(36, 20, 0, 0.9);
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.mobile-view nav{
+    text-align: right;
+    margin-top: 60px;
+    margin-right: 11px;
+}
+.mobile-view ul{
+    list-style: none;
+}
+.mobile-view li{
+    margin-bottom: 20px;
+    margin-right: 11px;
+}
+.mobile-view a{
+    color: var(--color-white);
+}
+
+#close-mobile-view{
+    margin-top: 45px;
+    margin-right: 25px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background: url('../images/icons/close-menu.svg') center/cover no-repeat;
+}

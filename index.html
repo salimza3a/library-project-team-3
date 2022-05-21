@@ -5,300 +5,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:ital@1&display=swap"
-        rel="stylesheet">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./assets/style/global.css">
-    <link rel="stylesheet" href="./assets/style/index.css">
+    <!-- Bootstrap.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Global.css -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
-    <title>Home | Library Book Store</title>
+    <title>Home Page | Library Book Store</title>
 </head>
-=======
-    <link rel="stylesheet" href="./assets/style/variable.css">
-    <link rel="stylesheet" href="./assets/style/style.css">
-    <link rel="stylesheet" href="./assets/style/media-queries.css">
-    <title>Home | Library Book Store</title>
-</head>
+
 <body>
-    <div class="container">
-        
-        <header>
-            <a class="navbar-brand" href="#">
-                <img src="./assets/images/headerLogo.svg" alt="Header Logo">
-            </a>
+    <!-- Header-START -->
+    <header>
+        <!-- Desktop View-menu -->
+        <div class="container d-flex justify-content-between align-items-center" id="header">
+            <div>
+                <a href="./index.html">
+                    <img src="./assets/images/logoRed.svg">
+                </a>
+            </div>
             <nav>
-               
                 <ul>
-                    <li><a class="active" href="#">Home</a></li>
+                    <li><a class="current header-item" href="./index.html" data-name="home">Home</a></li>
+                    <li><a href="./catalog.html" class="header-item" data-name="catalog">Catalog</a></li>
+                    <li><a href="./about.html" class="header-item" data-name="about">About Store</a></li>
+                    <li><a href="./contact.html" class="header-item" data-name="contact">Contact Us</a></li>
+                    <li><a href="./search.html" class="header-item" data-name="search">Search</a></li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center">
+                <button id="join-btn" type="button" data-toggle="modal" data-target="#join-us-modal">
+                    <img src="./assets/images/icons/joinUs.svg" alt="Join US" style="margin-right: 8.20px">
+                    <span>Join Us</span>
+                </button>
+
+                <button id="hamburger-btn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+        </div>
+        <!-- Desktop View END -->
+
+        <!-- Mobile View -->
+        <div class="mobile-view">
+            <button id="close-mobile-view"></button>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="./catalog.html">Catalog</a></li>
                     <li><a href="./about.html">About Store</a></li>
                     <li><a href="./contact.html">Contact Us</a></li>
                     <li><a href="./search.html">Search</a></li>
                 </ul>
-                
             </nav>
-            <a href="#" class="join-us">
-                <img src="./assets/images/icons/joinUs.svg">
-                <span>Join us</span>
-            </a>
-            <!-- Hamburger menu is here -->
-            <div class="hamburger">
-                <span> <img src="https://toppng.com/uploads/preview/square-svg-icon-free-menu-icon-sv-11563649031azv921gf4z.png" style="width:3.2rem  ;"></span>
-            </div>
-        </header>
+        </div>
+        <!-- Mobile View END-->
 
 
-        <!-- Main  -->
-
-
-        <main>
-            <section class="section-one">
-                <div class="left-side">
-                    <h2 class="">Books from A to Z</h2>
-                    <p class="">In our store you can find a book for every taste. A large assortment. Nice
-                        prices. Interesting stories.</p>
-                    <a href="./catalog.html">Go to the Catalog</a>
-
-                </div>
-                <div class="right-side">
-                    <img src="./assets/images/indexCover.png">
-                </div>
-            </section>
-
-            <section class="section-two">
-                <h2>Catalog</h2>
-                <div class="catalog-names">
-                    <a href="./catalog.html" class="specific-catalog">
-                        <span>Books</span>
->>>>>>> d6e3bb42b89d40987277ecfdc6339732be73fe1b
-
-<body>
-    <header>
-        <div class="row">
-            <div class="container">
-                <div class="header">
-                    <a class="navbar-brand" href="#">
-                        <img src="./assets/images/headerLogo.svg" alt="Header Logo">
-                    </a>
-                    <nav>
-                        <ul>
-                            <li><a class="active" href="#">Home</a></li>
-                            <li><a href="./catalog.html">Catalog</a></li>
-                            <li><a href="./about.html">About Store</a></li>
-                            <li><a href="./contact.html">Contact Us</a></li>
-                            <li><a href="./search.html">Search</a></li>
-                        </ul>
-                    </nav>
-                    <a href="#" class="join-us">
-                        <img src="./assets/images/icons/joinUs.svg">
-                        <span>Join us</span>
-                    </a>
-                    <button id="hamburger-btn">
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                    </button>
-
-                    <div class="mobile-menu">
-
-                    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="join-us-modal" tabindex="-1" role="dialog" aria-labelledby="join-us-modal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2 class="text-center mt-5" style="font-weight: bold;">
+                        Join Us
+                    </h2>
+                    <form action="#">
+                        <div class="join-form-items d-flex flex-column mt-3 py-3 px-5">
+                            <input type="text" class="py-3 px-2 mb-3" id="join-us-personal-name" placeholder="Full Name" required maxlength="20">
+                            <input type="email" class="py-3 px-2 mb-5" id="join-us-personal-email" placeholder="Email" required maxlength="35">
+                            <button type="submit" class="btn mb-3 py-3 px-2" id="join-submit-btn">Join</button>
+                        </div>
+                    </form>
+                    <div class="alert mx-5" role="alert" id="fail-box" style="display: none;"></div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Header-END -->
 
 
-    <!-- Main  -->
-
-
+    <!-- Main-START -->
     <main>
-        <div class="row">
-            <div class="container">
-                <section class="section-one">
-                    <div class="left-side">
-                        <h2 class="">Books from A to Z</h2>
-                        <p class="">In our store you can find a book for every taste. A large assortment. Nice
-                            prices. Interesting stories.</p>
-                        <a href="./catalog.html">Go to the Catalog</a>
-                    </div>
-                    <div class="right-side">
-                        <img src="./assets/images/indexCover.png">
-                    </div>
-                </section>
 
-                <section class="section-two">
-                    <h2>Catalog</h2>
-                    <div class="catalog-names">
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Books</span>
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Electronic books</span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span> Audio Books </span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Toys Creativity</span>
-
-                        </a>
-                        <a class="specific-catalog">
-                            <span>Book accessories </span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Notepads</span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Board games</span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Present</span>
-
-                        </a>
-                        <a href="./catalog.html" class="specific-catalog">
-                            <span>Stock</span>
-
-                        </a>
-                    </div>
-                </section>
-
-                <section class="section-three">
-                    <h2>About Store</h2>
-                    <div class="numbers-of-data">
-                        <div class=" branches-the-counter-part-one">
-                            <span class="same-values-part-one">35</span>
-                            <span class="same-values-part-two">Branches the country</span>
-                        </div>
-                        <div class=" products-catalog">
-                            <span class="same-values-part-one">898</span>
-                            <span class="same-values-part-two">Products the catalog</span>
-                        </div>
-                        <div class=" branches-the-counter-part-two">
-                            <span class="same-values-part-one">8659</span>
-                            <span class="same-values-part-two">Branches the country</span>
-                        </div>
-                        <div class=" delivery-hours-to-cities">
-                            <span class="same-values-part-one">72</span>
-                            <span class="same-values-part-two">Hours delivery to cities</span>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="section-four">
-                    <h2>Delivery</h2>
-                    <p>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its
-                        registration. Customers from other cities of Ukraine can receive an order within 1-5 days,
-                        depending
-                        on the location of the settlement and the selected delivery method. Orders over UAH 1000 are
-                        delivered free of charge *. You can see the available methods, exact terms and cost of delivery
-                        during checkout in the order basket, after selecting the delivery city. More details </p>
-                </div>
-<<<<<<< HEAD
-=======
-            </section>
-
-            <div class="section-four">
-                <h2>Delivery</h2>
-                <p>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its
-                    registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending
-                    on the location of the settlement and the selected delivery method. Orders over UAH 1000 are
-                    delivered free of charge *. You can see the available methods, exact terms and cost of delivery
-                    during checkout in the order basket, after selecting the delivery city. More details </p>
-            </div>
-
-         
-            <section class="section-five">
-                <h2>Follow us on social media</h2>
-                <div class="social-medias">
-                    <a href="#facebook"><img src="./assets/images/icons/fb.svg" alt="facebook logo" /></a>
-                    <a href="#twitter"><img src="./assets/images/icons/twitt.svg" alt="twitter logo" /></a>
-                    <a href="#instagram"><img src="./assets/images/icons/insta.svg" alt="instagram logo" /></a>
-                </div>
-            </section>
-        </main>
-
->>>>>>> d6e3bb42b89d40987277ecfdc6339732be73fe1b
-
-                <section class="section-five">
-                    <h2>Follow us on social media</h2>
-                    <div class="social-medias">
-                        <a href="#facebook"><img src="./assets/images/icons/fb.svg" alt="facebook logo" /></a>
-                        <a href="#twitter"><img src="./assets/images/icons/twitt.svg" alt="twitter logo" /></a>
-                        <a href="#instagram"><img src="./assets/images/icons/insta.svg" alt="instagram logo" /></a>
-                    </div>
-                </section>
-            </div>
-        </div>
     </main>
+    <!-- Main-END -->
 
 
-     <footer > 
-        <div class="footer-container">
-            <div class="footer-left-side">
-                <img src="./assets/images/logo.svg" />
-<<<<<<< HEAD
-=======
-                 <div class="img-and-logo">
-                    <span>Library</span>
-                    <span>Book Store</span>
-                </div>
->>>>>>> d6e3bb42b89d40987277ecfdc6339732be73fe1b
-            </div>
 
-            <div class="footer-right-side">
-                <div class="popular">
+    <!-- Footer-START -->
+    <footer>
 
-                    <ul>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Programming</a></li>
-                        <li><a href="#">Books for children</a></li>
-                        <li><a href="#">Psychology</a></li>
-                        <li><a href="#">Business</a></li>
-                    </ul>
-                </div>
-                <div class="cash">
-
-                    <ul>
-                        <li><a href="#">Cash</a></li>
-
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Payment</a></li>
-                        <li><a href="#">About the store</a></li>
-                    </ul>
-                </div>
-                <div class="help">
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Purchase returns</a></li>
-                        <li><a href="#">Buyer help</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <p>EACAMP - TEAM-3 2022 ©</p>
     </footer>
+    <!-- Footer-END -->
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <!-- Bootstrap requieres -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="./assets/js/index.js"></script>
-
+    <!-- Jquery 3.6.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- header.js -->
+    <script src="./assets/js/header.js"></script>
+    <!-- firebase -->
+    <script src="./assets/js/db.js"></script>
 </body>
-
 </html>

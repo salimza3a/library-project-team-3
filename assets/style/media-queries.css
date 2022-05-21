@@ -2,6 +2,7 @@
 @media screen and (min-width: 1200px) {}
     
 
+<<<<<<< HEAD
 
 @media screen and (max-width: 1000px) {
     #hamburger-btn{
@@ -13,6 +14,8 @@
         align-items: center;
     }
 
+=======
+>>>>>>> 8ac91916af1960b0f909fac80e288c91f3109205
     .numbers-of-data {
         display: flex;
         flex-wrap: wrap;
@@ -266,7 +269,10 @@
 @media screen and (max-width: 480px) {
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ac91916af1960b0f909fac80e288c91f3109205
 }
 
 /* catalog.html */
@@ -293,6 +299,17 @@
 
 
 /* about.html */
+@media screen and(max-width: 486px) {
+    
+
+
+
+    
+}
+
+
+
+
 
 
 /* admin.html */

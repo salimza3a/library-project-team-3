@@ -1,4 +1,1 @@
-
-
-
-//$('#')
+//fetch dates from FireBase
