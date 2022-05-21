@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Global.css -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/search.css">
+    <title>Search Page | Library Book Store</title>
+</head>
+
+<body>
+    <!-- Header-START -->
+    <header>
+        <!-- Desktop View-menu -->
+        <div class="container d-flex justify-content-between align-items-center" id="header">
+            <div>
+                <a href="./index.html">
+                    <img src="./assets/images/logoRed.svg">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="current header-item" href="./index.html" data-name="home">Home</a></li>
+                    <li><a href="./catalog.html" class="header-item" data-name="catalog">Catalog</a></li>
+                    <li><a href="./about.html" class="header-item" data-name="about">About Store</a></li>
+                    <li><a href="./contact.html" class="header-item" data-name="contact">Contact Us</a></li>
+                    <li><a href="./search.html" class="header-item" data-name="search">Search</a></li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center">
+                <button id="join-btn" type="button" data-toggle="modal" data-target="#join-us-modal">
+                    <img src="./assets/images/icons/joinUs.svg" alt="Join US" style="margin-right: 8.20px">
+                    <span>Join Us</span>
+                </button>
+
+                <button id="hamburger-btn">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+        </div>
+        <!-- Desktop View END -->
+
+        <!-- Mobile View -->
+        <div class="mobile-view">
+            <button id="close-mobile-view"></button>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./catalog.html">Catalog</a></li>
+                    <li><a href="./about.html">About Store</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./search.html">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Mobile View END-->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="join-us-modal" tabindex="-1" role="dialog" aria-labelledby="join-us-modal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2 class="text-center mt-5" style="font-weight: bold;">
+                        Join Us
+                    </h2>
+                    <form action="#">
+                        <div class="join-form-items d-flex flex-column mt-3 py-3 px-5">
+                            <input type="text" class="py-3 px-2 mb-3" id="join-us-personal-name" placeholder="Full Name" required maxlength="20">
+                            <input type="email" class="py-3 px-2 mb-5" id="join-us-personal-email" placeholder="Email" required maxlength="35">
+                            <button type="submit" class="btn mb-3 py-3 px-2" id="join-submit-btn">Join</button>
+                        </div>
+                    </form>
+                    <div class="alert mx-5" role="alert" id="fail-box" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header-END -->
+
+
+    <!-- Main-START -->
+    <main>
+        <div class="container">
+        <div class="main-box">
+            <div class="row">
+                <div class="col-5">
+                    <div id="heading">
+                    <h2>Search</h2>
+                    </div>
+                    <form>
+                    <input type="text" placeholder="Order in Chaos" id="search-data" required>
+                    <input type="submit" placeholder="Search" class="search text-center" id="search-btn">
+                </form>
+                </div>
+                <!---->
+                <div class="col-7">
+                    <div class="right-box">
+                        <div class="left">
+                            <img src="./assets/images/searchBook.svg">
+                        </div>
+                        <div class="right">
+                            <h1>Order in Choas</h1>
+                            <h4>Konstantin Koptelov</h4>
+                            <p>We work without holidays and weekends! Residents of Kiev can receive an order on the day of its registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending on the location of the settlement and the selected delivery method. Orders over UAH 1000 are delivered  free of charge *. You can see the available methods, exact terms and cost of delivery during checkout in the order basket, after selecting the delivery city     </p>
+                        
+                
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
+            </div>
+        
+        </div>
+    </div>
+            
+    </main>
+    <!-- Main-END -->
+
+
+
+    <!-- Footer-START -->
+    <footer>
+
+    </footer>
+    <!-- Footer-END -->
+
+
+    <!-- Bootstrap requieres -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <!-- Jquery 3.6.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- header.js -->
+    <script src="./assets/js/header.js"></script>
+    <!-- firebase -->
+    <script src="./assets/js/db.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    background-color: #FFFFFF;
+}
+
+input{
+    width:  433px;
+    height:  65px;
+    margin-bottom:44px  ;
+}
+.right-box{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid purple;
+    margin-top: 80px;
+    background-color: #FFFFFF;
+}
+#heading h2{
+    margin-bottom: 42px;
+
+}
+ .left img{
+width: 220px;
+height: 306px;
+}
+#search-btn{
+    background-color: #E16A00;
+}
+.right-box .right p{
+    font-size: 18px;
+    font-weight: 400;
+}
