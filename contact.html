@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+
     <title>Contact | Library Book Store</title>
 </head>
 
@@ -100,12 +101,29 @@
             </div>
             <div class="row">
                 <div class="container">
-                    <form action="">
-                        <input type="text" class="col-6 col-xm-12">
-
-
-                        <input type="text">
-                    </form>
+                    <form>
+                        <div class="form-row">
+                          <div class="col">
+                            <input type="text" id="fullname" class="form-control" placeholder="Full Name" required>
+                          </div>
+                          <div class="col">
+                            <input type="email" id="email" class="form-control" placeholder="Email" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                              <input type="text" id="address" class="form-control" placeholder="Address" required>
+                            </div>
+                            <div class="col">
+                              <input type="text" id="phone" class="form-control" placeholder="Phone" required>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="col-6">
+                              <input type="submit" id="contactUsBtn" class="form-control" value="Send">
+                            </div>
+                          </div>
+                      </form>
                 </div>
             </div>
         </div>
@@ -204,6 +222,8 @@
     <script src="./assets/js/header.js"></script>
     <!-- firebase -->
     <script src="./assets/js/db.js"></script>
+    <!-- contact.js -->
+    <script src="./assets/js/contact.js"></script>
 </body>
 
 </html>

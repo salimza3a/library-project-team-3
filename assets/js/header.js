@@ -75,6 +75,6 @@ $('#close-mobile-view').on('click', () => {
 });
 
 $(function () {
-    let currentLink = `nav a[href="./${location.pathname.split("/")[1]}"]`;
+    let currentLink = `header nav a[href="./${location.pathname.split("/")[1]}"]`;
     $(currentLink).addClass('current');
 });
