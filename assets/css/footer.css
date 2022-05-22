@@ -51,3 +51,19 @@ footer{
     color: #FFF;
 }
 
+.footer-mobile-view{
+    display: none;
+}
+.footer-mobile-view ul{
+    list-style-type: none;
+}
+.footer-main-area li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.footer-mobile-view a{
+    color: #FFF;
+}
+.footer-mobile-view a:hover{
+    text-decoration: none;
+}

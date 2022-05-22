@@ -61,6 +61,33 @@
     .statistics-area {
         flex-direction: column;
     }
+    .links{
+        display: none !important;
+    }
+    .footer-mobile-view {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-mobile-view li{
+        margin: 0 5px;
+    }
+
+    .footer-mobile-view a{
+        font-size: 12px;
+    }
+    #main-footer-area{
+        justify-content: center;
+    }
+    .footer-main-area{
+        padding-top: 18px;
+    }
+    .footer-mobile-view + div{
+        padding-top: 39px;
+        padding-bottom: 7px;
+    }
 }
 
 
@@ -103,7 +130,7 @@
     }
 
     #join-us-modal {
-        width: 50%;
+        width: 100%;
         padding: 5px !important;
     }
 
@@ -115,10 +142,17 @@
         justify-content: flex-end;
         cursor: pointer;
     }
-
     .join-form-items{
         padding: 24px !important;
     }
-
+    .social-bar #header{
+        font-size: 18px;
+    }
+    .social-bar img{
+        width: 15%;
+    }
+    .social-bar-items{
+        text-align: center;
+    }
     
 }
