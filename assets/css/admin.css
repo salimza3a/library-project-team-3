@@ -1,15 +1,37 @@
 /* Global */
-a{
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+a {
     color: #FFF;
 }
-a:hover{
+
+a:hover {
     color: #FFF;
     text-decoration: none;
 }
 
 /* this two classes for showing and hiding panels and smooth effect */
-.show{display: block !important;}
-.hide{display: none !important;}
+#admin-login-show {
+    display: block !important;
+}
+
+#admin-login-hide {
+    display: none !important;
+}
+
+.show {
+    display: flex !important;
+}
+
+.hide {
+    display: none !important;
+}
 
 
 /* Admin login. */
@@ -20,7 +42,6 @@ a:hover{
 }
 
 .login-logo img {
-    
     margin-top: 30px;
     margin-left: 32px;
 }
@@ -30,7 +51,6 @@ a:hover{
     width: 30%;
     height: 50%;
     background-color: #FFF;
-    display: none;
 }
 
 #header {
@@ -53,24 +73,22 @@ a:hover{
 #userName {
     margin-bottom: 34px;
 }
+
 #password {
     margin-bottom: 84px;
 }
+
 #login-btn {
     margin-bottom: 34px;
     background-color: var(--color-orange);
     border-radius: 5px;
     color: #FFF;
 }
-#fails-box{
+
+#fails-box {
     width: 80%;
     display: none;
 }
-<<<<<<< HEAD:assets/style/admin.css
-/* .hide{display: none;} */ 
-=======
-
->>>>>>> 4f812d2a824fe24a03e07f313670c205edd9f3ce:assets/css/admin.css
 
 /* Admin login end. */
 
@@ -79,41 +97,49 @@ a:hover{
 
 /* Admin Control panel */
 
-.admin-area{
+.admin-area {
     width: 100%;
     background-color: #FFF;
 }
 
-.admin-page-logo{
+.admin-page-logo {
     margin-top: 74px;
     width: 80%;
 }
 
-.right-shortcut{
-    width: 20%;
+.left-shortcut {
+    width: 20vw;
     height: 100vh;
     background-color: var(--color-red);
 }
-.main{
-    width: 80%;
-    height: 100%;
-    margin-left: 3.2rem;
-    margin-top:10%;
+
+.main {
+    width: 80vw;
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
+    margin-left: 32px;
+    padding-right: 108px;
+    margin-top: 90px;
+    scroll-behavior: smooth;
 }
-.lists{
+
+.lists {
     margin-top: 55px;
     width: 80%;
 }
+
 .lists a {
     padding: 10px;
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: 400;
 }
-.lists a img{
+
+.lists a img {
     margin-right: 11px;
 }
-.lists button{
+
+.lists button {
     background-color: transparent;
     border: none;
     width: 100%;
@@ -124,41 +150,50 @@ a:hover{
     color: #FFF;
 }
 
-.lists *{
+.lists * {
     transition: all 300ms;
 }
 
-.lists *:hover{
-    background-color: rgba(0,0,0,.3);
+.lists *:hover {
+    background-color: rgba(0, 0, 0, .3);
     border-radius: 3px;
 }
-.lists button img{
+
+.lists button img {
     margin-right: 11px;
 }
 
-.admin-area{
-    background-color: #FFF;
+.admin-area {
+    background-color: #fffbf5;
 }
 
-.admin-panel{
+.admin-panel {
     display: block !important;
 }
 
 /* Home section */
-#home > h2:not(.book-form-tag), 
-#about > h2,
- #join-us > h2,
- #contact > h2  {
+
+#home>h2:not(.book-form-tag),
+#about>h2,
+#join-us>h2,
+#contact>h2 {
     font-size: 30px;
     font-weight: 600;
     color: var(--color-gray);
 }
 
 
-#home > span {
+#home>span {
     font-size: 18px;
     color: var(--color-gray);
     margin-bottom: 6px;
+}
+
+#about {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
 }
 
 .search {
@@ -171,15 +206,37 @@ a:hover{
     margin-right: 2rem;
 }
 
-.form-group > input,
- .form-group > textarea,
- .form-group > .form-control,
- .form-group > .button {
-    width: 85%;
+.form-group>input,
+.form-group>textarea,
+.form-group>.form-control,
+.form-group>.button {
+    width: 100%;
+    box-shadow: 0px 4px 18px rgba(158, 168, 189, 0.31);
+    border-radius: 10px;
+}
+
+#home>h2 {
+    margin-bottom: 26px;
+}
+
+#home #search-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 196.19%;
+    margin-left: 5px;
+    color: #333333;
+}
+
+.book-form {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 60px;
 }
 
 .button {
-    width: 85%;
+    width: 100%;
     display: block;
     background-color: var(--button-color);
     border-radius: 10px;
@@ -195,7 +252,7 @@ a:hover{
     border-radius: 30px;
     background-color: var(--color-orange);
     color: #FFFFFF;
-    padding: 8px 23px ;
+    padding: 8px 23px;
     border: none;
     outline: none;
 }
@@ -204,8 +261,10 @@ a:hover{
     padding: 12px;
 }
 
-#join-us, #contact {
+#join-us,
+#contact {
     margin-top: 5rem;
+    margin-bottom: 80px;
 }
 
 #join-us .table {
@@ -221,3 +280,100 @@ table thead {
     color: var(--color-white)
 }
 
+#admin-top-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 58px;
+    top: 48px;
+}
+
+#searchThisBookName {
+    width: 30%;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 2px solid rgba(57, 31, 0, 0.48);
+    border-radius: 34px;
+}
+
+#searchBookBtn {
+    background: #FF8B00;
+}
+
+.search-history {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+    background: #F1F0F0;
+    border-radius: 35px;
+    width: 30%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-history-item {
+    transition: all 222ms;
+    color: #BCBCBC;
+    width: 80%;
+    border-radius: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 5px 0;
+    display: flex;
+}
+
+.search-history-item:hover {
+    box-shadow: 0 0 1px #000;
+}
+
+.search-history-item span {
+    margin-left: 32px;
+    margin-right: 24px;
+}
+
+.searching-result {
+    height: 210px;
+    width: 35%;
+    margin-bottom: 100px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.founded-book {
+    transition: all 300ms;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    margin: 7px 0;
+}
+.founded-book:hover{
+    background-color: #bab8ba;
+}
+
+.founded-book #details {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#searching-result-header{
+    font-size: 20px;
+    width: 35%;
+    padding-bottom: 20px;
+}
+
+.result-data{
+    margin: 10px 0;
+}

@@ -8,12 +8,12 @@ const db = {
     appId: "1:856410807514:web:eb80b1d21b926175b9d9e3"
 };
 
-firebase.initializeApp(db)
+// firebase.initializeApp(db)
 
-let result = firebase.database();
+// let result = firebase.database();
 
-let adminBranch = result.ref('admin');
+// let adminBranch = result.ref('admin');
 
 
 
-adminBranch.on('value', function(snapshot){let data = snapshot.val();console.log(data)})
+// adminBranch.on('value', function(snapshot){let data = snapshot.val();console.log(data)})

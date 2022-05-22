@@ -11,14 +11,15 @@ $(document).ready(function () {
         let isHave = localStorage.getItem('isLogged');
 
         if (isHave !== null) {
-            document.title = 'Welcome to Admin Page'
+            document.title = 'Welcome to Admin Page | Library Book Store';
             directLogin();
             return;
         }
-        $('.admin-login-area').removeClass('hide');
-        $('.admin-login-area').addClass('show');
+        $('.admin-login-area').attr('id', 'admin-panel-show');
     }
     checkLocal();
+
+    $('#login-btn').on('click', checkLoginInformations);
 
     function checkLoginInformations(e) {
         e.preventDefault();
@@ -26,6 +27,7 @@ $(document).ready(function () {
         let password = $('#password').val();
 
         if (username !== testUsername) {
+            //username&password wrong
             if (password !== testPassword) {
                 failBox.addClass('alert-danger');
                 failBox.text('Username & Password wrong!');
@@ -33,6 +35,7 @@ $(document).ready(function () {
                 failBox.fadeOut(1800);
                 return;
             } else {
+                //only username wrong
                 failBox.addClass('alert-danger');
                 failBox.text('Username wrong!');
                 failBox.fadeIn(400);
@@ -40,6 +43,7 @@ $(document).ready(function () {
                 return;
             }
         } else if (password !== testPassword) {
+            //password & username wrong.
             if (username !== testUsername) {
                 failBox.addClass('alert-danger');
                 failBox.text('Username & Password wrong!');
@@ -47,6 +51,7 @@ $(document).ready(function () {
                 failBox.fadeOut(1800)
                 return;
             } else {
+                //only password wrong.
                 failBox.addClass('alert-danger');
                 failBox.text('Password wrong!');
                 failBox.fadeIn(400);
@@ -58,18 +63,15 @@ $(document).ready(function () {
         login();
     }
 
-    $('#login-btn').on('click', checkLoginInformations);
-    
     function login() {
-        $('.admin-login-area').html('');
-        $('.admin-login-area').addClass('hide');
-        $('.admin-panel').addClass('show');
+        $('.admin-login-area').attr('id', 'admin-login-hide');
+        $('.admin-area').removeClass('hide');
+        $('.admin-area').addClass('show');
     }
 
     function directLogin() {
-        $('.admin-login-area').html('');
-        $('.admin-login-area').hide(100);
-        setTimeout(() =>$('.admin-panel').addClass('show'), 1000);
+        $('.admin-area').removeClass('hide');
+        $('.admin-area').addClass('show');
     }
 
     $('#userName').on('input', function () {
@@ -97,6 +99,14 @@ $(document).ready(function () {
             return true;
         }
     }
+    //logout and isLogged deleted from Local Storage & reload page.
+    $('#admin-logout').on('click', function () {
+        let prompt = confirm('Really Logout?');
+        if (prompt) {
+            localStorage.removeItem('isLogged');
+            window.location.reload();
+        }
+    });
 
     //  ================================
     //   LOGIN PROCESSING FULLY COMPLETE.
@@ -107,7 +117,10 @@ $(document).ready(function () {
     // ===================================
     // MAIN CODES HERE, BOOK API + FIREBASE
     //====================================
-    
-    
-    //const db = firebase.init(app);
+
+    //_+_+_+_+_+_+_
+    //query
+    //Salim connect this API: https://www.googleapis.com/books/v1/volumes?q=flowers, and try to using on admin.html
+
+    //_+_+_+_+_+_+_
 });
