@@ -1,22 +1,3 @@
-body{
-     
-     background-color: #FFFAF5;
-}
-
-.content {
-    margin-top: 150px;
-}
-.title1 h1{
-    color: #333333;
-}
- #info button{
-    background-color: #E16A00;
-}
-#info input{
-    margin-right: 36px; /*3rem*/
-    
-}
-
-.section-five{
-    margin-top: 80px;
+main{
+    margin-top: 102px;
 }

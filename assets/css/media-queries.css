@@ -40,7 +40,7 @@
     }
 
     #cover-image {
-        justify-content: center;
+        justify-content: center !important;
         margin-top: 39px;
     }
 

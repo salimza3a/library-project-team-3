@@ -54,13 +54,16 @@ function processForm(event) {
 
 
 function writeFirebase(name, email) {
+
+    //...wrirte DB
+
     failBox.removeClass('alert-danger');
     failBox.addClass('alert-primary');
     failBox.text('Thanks! Your informations successfully saved');
     failBox.fadeIn(500);
     failBox.fadeOut(3000);
+    setTimeout(() => $('.modal').click(), 2800); //close join-us modal
     return;
-    //...wrirte DB
 }
 
 $('#hamburger-btn').on('click', () => {
@@ -71,8 +74,7 @@ $('#close-mobile-view').on('click', () => {
     $('.mobile-view').hide(500)
 });
 
-// pagination function
-$(".header-item").click(function () {
-    $(".header-item").removeClass("current");
-    $(this).addClass("current");
+$(function () {
+    let currentLink = `nav a[href="./${location.pathname.split("/")[1]}"]`;
+    $(currentLink).addClass('current');
 });
