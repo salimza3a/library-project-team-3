@@ -3,7 +3,6 @@ header {
     padding-bottom: 20px;
     border-bottom: 0.1px solid #e0e0e0;
     font-family: var(--main-font);
-    position: relative;
 }
 
 #header li {
@@ -107,6 +106,7 @@ ul {
 }
 
 #close-mobile-view{
+    position: relative;
     margin-top: 45px;
     margin-right: 25px;
     cursor: pointer;
@@ -117,3 +117,4 @@ ul {
     outline: none;
     background: url('../images/icons/close-menu.svg') center/cover no-repeat;
 }
+#join-us-close-menu{display: none;}

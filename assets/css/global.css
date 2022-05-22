@@ -3,4 +3,3 @@
 @import url("./footer.css");
 @import url("./media-queries.css");
 body{background-color: #E5E5E5; scroll-behavior: smooth;}
-main{min-height: 100vh;}

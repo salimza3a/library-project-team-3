@@ -1,0 +1,144 @@
+body {
+    font-family: var(--main-font);
+}
+
+/* Books from a to z area START */
+.books-from-area {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+#books-from {
+    margin-top: 137px;
+}
+
+#cover-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cover-image>img {
+    width: 80%;
+}
+
+#title-header {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+#btn-catalog {
+    width: 60%;
+    height: 50px;
+    background-color: var(--color-orange);
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Books from A to Z area END */
+
+
+/* Catalog area START */
+
+#catalog {
+    margin-top: 66px;
+    display: flex;
+}
+
+#catalog-title {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 196.19%;
+    color: #000000;
+}
+
+#catalog-items {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#catalog-items a {
+    color: var(--color-black);
+}
+
+#catalog-items a:hover {
+    text-decoration: none;
+}
+
+.catalog {
+    margin: 30px;
+    width: 300px;
+    height: 76px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+/* Catalog area END */
+
+/* About store area */
+
+#about {
+    margin-top: 136px;
+    margin-bottom: 80px;
+}
+
+.about-store-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-title {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 196.19%;
+    color: #241400;
+}
+
+.statistics-area {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.area div:first-child {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 196.19%;
+    color: #241400;
+    margin-right: 27px;
+
+}
+
+#delivery-title {
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 42px;
+    color: #241400;
+}
+
+#delivery-content{
+    text-align: center;
+    line-height: 196.19%;
+}

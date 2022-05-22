@@ -1,55 +1,124 @@
 /* tablets */
 @media screen and (max-width: 992px) {
-    header{
+    header {
         margin-top: 16px;
     }
-    #header nav{
+
+    #header nav {
         display: none;
     }
-    #hamburger-btn{
+
+    #hamburger-btn {
         display: inline-block;
     }
-    #join-btn span{
+
+    #join-btn span {
         display: none;
     }
-    .admin-form{
+
+    .admin-form {
         width: 60%;
     }
-    
+
+    .books-from-area {
+        flex-direction: column;
+    }
+
+    .books-from-area .title-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .books-from-area .title-area p {
+        text-align: center;
+    }
+
+    #btn-catalog {
+        width: 90vw !important;
+    }
+
+    #cover-image {
+        justify-content: center;
+        margin-top: 39px;
+    }
+
+    #cover-image>img {
+        width: 100%;
+    }
+
+    .title-area #title-header {
+        font-size: 35px;
+    }
+
+    .statistics-area .area {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .statistics-area {
+        flex-direction: column;
+    }
 }
 
 
 /* mobile */
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px) {
     .all-books-and-scroll {
         display: flex;
         flex-direction: column;
         text-align: start;
 
     }
-    
+
     .scroll-bar ul {
         height: 40px;
     }
 
-    .admin-form{
+    .admin-form {
         margin-top: 94px;
         width: 90%;
     }
-    .admin-form #header{
+
+    .admin-form #header {
         font-size: 24px;
         margin-top: 24px;
     }
-    #login-btn{
+
+    #login-btn {
         font-size: 18px;
     }
+
     #userName,
     #login-btn,
-    #password{
+    #password {
         width: 90%;
     }
-    #password{
+
+    #password {
         margin-bottom: 24px;
     }
+
+    #join-us-modal {
+        width: 50%;
+        padding: 5px !important;
+    }
+
+    #join-us-close-menu {
+        margin-top: 43px;
+        margin-right: 15px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+
+    .join-form-items{
+        padding: 24px !important;
+    }
+
+    
 }
