@@ -119,7 +119,7 @@ $(document).ready(function () {
 
     function searchBook() {
         let bookName = $('#searchThisBookName').val();
-        if(bookName === ''){
+        if (bookName === '') {
             $('#searchThisBookName').val('Please fill here!');
             return;
         }
@@ -164,20 +164,21 @@ $(document).ready(function () {
 
         $("#bookName").val(
             jsonData.volumeInfo.title === undefined ? 'Title not found!' : jsonData.volumeInfo.title
-            );
+        );
         $('#authorName').val(
             jsonData.volumeInfo.authors === undefined ? 'Author not found!' : jsonData.volumeInfo.authors
         );
 
         $('#imageUrl').val(
             jsonData.volumeInfo.imageLinks.thumbnail === undefined ? 'Book image not found!' : jsonData.volumeInfo.imageLinks.thumbnail
-            );
+        );
 
         $('#publicationYear').val(
             jsonData.volumeInfo.publishedDate.substring(0, 4) === undefined ? 'Book published year not found!' : jsonData.volumeInfo.publishedDate
-            );
-
-        // $('#imageUrl').val(jsonData.volumeInfo.thumbnail);
+        );
+        $('#searchDescription').val(
+            jsonData.volumeInfo.description === undefined ? 'Description not found!' : jsonData.volumeInfo.description
+        )
     })
 
 });
