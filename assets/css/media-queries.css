@@ -93,6 +93,16 @@
         padding-top: 39px;
         padding-bottom: 7px;
     }
+    .catalog-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #categories{
+        margin-top: 20px;
+        width: 80%;
+        padding: 15px;
+    }
 }
 
 

@@ -34,4 +34,4 @@ $('.books').slick({
 });
 
 
-//fetch data
+//fetch data from FireBase
