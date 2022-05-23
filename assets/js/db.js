@@ -9,9 +9,14 @@ const db = {
 };
 
 firebase.initializeApp(db)
+<<<<<<< HEAD
 
 let result = firebase.database();
 
+=======
+
+ let database = firebase.database();
+>>>>>>> 5aebab50f623a535217ca630af0674453fdf01dc
 
 
 
