@@ -174,11 +174,11 @@ $(document).ready(function () {
         );
 
         $('#publicationYear').val(
-            jsonData.volumeInfo.publishedDate.substring(0, 4) === undefined ? 'Book published year not found!' : jsonData.volumeInfo.publishedDate
+            jsonData.volumeInfo.publishedDate === undefined ? 'Book published year not found!' : jsonData.volumeInfo.publishedDate.substring(0, 4)
         );
         $('#searchDescription').val(
             jsonData.volumeInfo.description === undefined ? 'Description not found!' : jsonData.volumeInfo.description
         )
-    })
+    });
 
 });
