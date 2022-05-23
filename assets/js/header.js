@@ -50,11 +50,13 @@ function processForm(event) {
         return;
     }
     writeFirebase(name, email);
+  
+
 }
 
 
 function writeFirebase(name, email) {
-
+   
     //...wrirte DB
 
     failBox.removeClass('alert-danger');
