@@ -110,17 +110,74 @@ $(document).ready(function () {
 
     //  ================================
     //   LOGIN PROCESSING FULLY COMPLETE.
-    // ==================================
+    // ==================================    
 
-    //=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-    // ===================================
-    // MAIN CODES HERE, BOOK API + FIREBASE
-    //====================================
 
-    //_+_+_+_+_+_+_
-    //query
-    //Salim connect this API: https://www.googleapis.com/books/v1/volumes?q=flowers, and try to using on admin.html
+    // Google BOOKS API
+    $('#searchBookBtn').on('click', searchBook);
 
-    //_+_+_+_+_+_+_
+    function searchBook() {
+        let bookName = $('#searchThisBookName').val();
+        if(bookName === ''){
+            $('#searchThisBookName').val('Please fill here!');
+            return;
+        }
+
+        let query = `https://www.googleapis.com/books/v1/volumes?q=${bookName}`;
+        let data = [];
+        let booksContainerDiv = $('.founded-books');
+        let idx = 0;
+
+        function incrementIdx() {
+            idx++;
+            return '';
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: query
+        }).done(res => {
+            data = Object.values(res.items);
+            let searchData = [];
+            for (let book of data) {
+                searchData.push([
+                    book.volumeInfo.authors === undefined ? '<span class="not-found-author">Müəllif tapılmadı<span>' : book.volumeInfo.authors, book.volumeInfo.title
+                ]);
+            }
+
+            booksContainerDiv.html(searchData.map(items =>
+                `
+                <button id="founded-item" class="book-item" data-json="${encodeURIComponent(JSON.stringify(data[idx]))}">
+                    <span><i class="fa fa-history" aria-hidden="true"></i></span> 
+                    ${items.map(item => item).join(' - ')}
+                 </button>
+                ${incrementIdx()}
+                `
+            ));
+        });
+    }
+
+    $(document).on('click', '.book-item', function () {
+        let jsonData = JSON.parse(decodeURIComponent($(this).data("json")));
+        console.log(jsonData);
+
+        $("#bookName").val(
+            jsonData.volumeInfo.title === undefined ? 'Title not found!' : jsonData.volumeInfo.title
+            );
+        $('#authorName').val(
+            jsonData.volumeInfo.authors === undefined ? 'Author not found!' : jsonData.volumeInfo.authors
+        );
+
+        $('#imageUrl').val(
+            jsonData.volumeInfo.imageLinks.thumbnail === undefined ? 'Book image not found!' : jsonData.volumeInfo.imageLinks.thumbnail
+            );
+
+        $('#publicationYear').val(
+            jsonData.volumeInfo.publishedDate.substring(0, 4) === undefined ? 'Book published year not found!' : jsonData.volumeInfo.publishedDate
+            );
+
+        // $('#imageUrl').val(jsonData.volumeInfo.thumbnail);
+    })
+
 });
