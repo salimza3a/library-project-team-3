@@ -10,6 +10,10 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:ital@1&display=swap"
         rel="stylesheet">
+    <!-- slick.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/catalog.css">
@@ -95,34 +99,447 @@
     <!-- Main-START  from(index.html) -->
     <main>
         <section id="catalog">
-
             <div class="container">
-                <div id="catalog-title">
-                    All books
-                </div>
-                <div class="books all">
-                    <!-- fetch from firebase -->
-                    <div class="book">
-                        <div class="new-badge yes">
-                            New
-                        </div>
-                        <div class="book-image">
-                            <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail" alt="Book preview">
-                        </div>
-                        <div class="book-name">
-                            Test Name
-                        </div>
-                        <div class="book-author">
-                            Tester
-                        </div>
-                        <button type="button" class="read-more-btn" value="writehHereJson">
-                            READ MORE
+                <div class="catalog-header">
+                    <div id="catalog-title">
+                        All books
+                    </div>
+                    <div id="categories">
+                        <button class="category-btn" value="fantastic">
+                            Fantastic
+                        </button>
+                        <button class="category-btn" value="baby">
+                            Baby
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Romantic
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Life
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Community
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Cities
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Cultures
+                        </button>
+                        <button class="category-btn" value="romantic">
+                            Daily
                         </button>
                     </div>
-
-                    
                 </div>
-            </div>
+
+                <div id="all-books">
+                    <div class="books all responsive">
+                        <!-- fetch from firebase -->
+
+                        <div class="book">
+                            <div class="new-badge isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+
+                        <div class="book">
+                            <div class="new-badge isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/aboutImg.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="http://books.google.com/books/content?id=DVRYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                                    width="134px" height="190px" id="thumbnail" alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bestseller-books">
+
+                    <div id="section-title">best seller</div>
+                    <div class="books all responsive">
+                        <!-- fetch from firebase -->
+
+
+                        <div class="book">
+                            <div class="new-badge isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="http://books.google.com/books/content?id=DVRYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                                    width="134px" height="190px" id="thumbnail" alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+
+                        <div class="book">
+                            <div class="new-badge isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/aboutImg.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes isOld">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="book">
+                            <div class="new-badge yes">
+                                New
+                            </div>
+                            <div class="book-image">
+                                <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                    alt="Book preview">
+                            </div>
+                            <div class="book-name">
+                                Test Name
+                            </div>
+                            <div class="book-author">
+                                Tester
+                            </div>
+                            <button type="button" class="read-more-btn" value="writehHereJson">
+                                READ MORE
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- new relases area -->
+                    <div id="bestseller-books">
+                        <div id="section-title">new relases</div>
+                        <div class="books all responsive">
+                            <!-- fetch from firebase -->
+
+
+                            <div class="book">
+                                <div class="new-badge isOld">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="http://books.google.com/books/content?id=DVRYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                                        width="134px" height="190px" id="thumbnail" alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+
+                            <div class="book">
+                                <div class="new-badge isOld">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/aboutImg.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <div class="book">
+                                <div class="new-badge yes">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <div class="book">
+                                <div class="new-badge yes isOld">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <div class="book">
+                                <div class="new-badge yes">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <div class="book">
+                                <div class="new-badge yes">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <div class="book">
+                                <div class="new-badge yes">
+                                    New
+                                </div>
+                                <div class="book-image">
+                                    <img src="./assets/images/testbook.svg" width="134px" height="190px" id="thumbnail"
+                                        alt="Book preview">
+                                </div>
+                                <div class="book-name">
+                                    Test Name
+                                </div>
+                                <div class="book-author">
+                                    Tester
+                                </div>
+                                <button type="button" class="read-more-btn" value="writehHereJson">
+                                    READ MORE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
         </section>
     </main>
@@ -220,6 +637,10 @@
     <script src="./assets/js/header.js"></script>
     <!-- firebase -->
     <script src="./assets/js/db.js"></script>
+    <!-- slick.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- catalog.js -->
     <script src="./assets/js/catalog-page.js"></script>
 </body>
