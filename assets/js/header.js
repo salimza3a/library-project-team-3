@@ -7,7 +7,7 @@ function processForm(event) {
   let name = $("#join-us-personal-name").val();
   let email = $("#join-us-personal-email").val();
 
-<<<<<<< HEAD
+
     if (!name) {
         failBox.text('Name is empty!');
         failBox.fadeIn(600);
@@ -51,75 +51,22 @@ function processForm(event) {
         return;
     }
     writeFirebase(name, email);
-  
-
-}
-
-
-function writeFirebase(name, email) {
    
-    //...wrirte DB
+     name = $("#join-us-personal-name").val("");
+     email = $("#join-us-personal-email").val("");
 
-    failBox.removeClass('alert-danger');
-    failBox.addClass('alert-primary');
-    failBox.text('Thanks! Your informations successfully saved');
-=======
-  if (!name) {
-    failBox.text("Name is empty!");
-    failBox.fadeIn(600);
-    failBox.fadeOut(2500);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  if (!email) {
-    failBox.text("Email is empty!");
-    failBox.fadeIn(600);
-    failBox.fadeOut(2500);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  if (!name && !email) {
-    failBox.text("Email & Name are empty!");
-    failBox.fadeIn(600);
-    failBox.fadeOut(2500);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  if (name.length >= 20) {
-    failBox.text("The Name greater than 20 character!");
-    failBox.fadeIn(600);
-    failBox.fadeOut(2500);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  if (email.length >= 35) {
-    failBox.text("The Email greater than 35 Character");
-    failBox.fadeIn(600);
-    failBox.fadeOut(2500);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  if (email.indexOf("@") === -1) {
-    failBox.text("Invalid Email! Example: Jeff@gmail.com");
->>>>>>> 5aebab50f623a535217ca630af0674453fdf01dc
-    failBox.fadeIn(500);
-    failBox.fadeOut(3000);
-    failBox.addClass("alert-danger");
-    return;
-  }
-  writeFirebase(name, email);
-  name = $("#join-us-personal-name").val("");
-  email = $("#join-us-personal-email").val("");
 }
 
-database.ref("/join_us");
+
+
+
 let joinUsBranch = database.ref("/join_us");
 
 function writeFirebase(name, email) {
+ 
   joinUsBranch.push().set({ name, email });
 
   //...wrirte DB
-  console.log(name, email);
 
   failBox.removeClass("alert-danger");
   failBox.addClass("alert-primary");

@@ -140,9 +140,9 @@ $(document).ready(function () {
       let searchData = [];
       for (let book of data) {
         searchData.push([
-          book.volumeInfo.authors === undefined
-            ? '<span class="not-found-author">Müəllif tapılmadı<span>'
-            : book.volumeInfo.authors,
+          book.volumeInfo.authors === undefined ?
+          '<span class="not-found-author">Müəllif tapılmadı<span>' :
+          book.volumeInfo.authors,
           book.volumeInfo.title,
         ]);
       }
@@ -150,7 +150,7 @@ $(document).ready(function () {
       booksContainerDiv.html(
         searchData.map(
           (items) =>
-            `
+          `
                 <button id="founded-item" class="book-item" data-json="${encodeURIComponent(
                   JSON.stringify(data[idx])
                 )}">
@@ -169,69 +169,110 @@ $(document).ready(function () {
     console.log(jsonData);
 
     $("#bookName").val(
-      jsonData.volumeInfo.title === undefined
-        ? "Title not found!"
-        : jsonData.volumeInfo.title
+      jsonData.volumeInfo.title === undefined ?
+      "Title not found!" :
+      jsonData.volumeInfo.title
     );
     $("#authorName").val(
-      jsonData.volumeInfo.authors === undefined
-        ? "Author not found!"
-        : jsonData.volumeInfo.authors
+      jsonData.volumeInfo.authors === undefined ?
+      "Author not found!" :
+      jsonData.volumeInfo.authors
     );
 
     $("#imageUrl").val(
-      jsonData.volumeInfo.imageLinks.thumbnail === undefined
-        ? "Book image not found!"
-        : jsonData.volumeInfo.imageLinks.thumbnail
+      jsonData.volumeInfo.imageLinks.thumbnail === undefined ?
+      "Book image not found!" :
+      jsonData.volumeInfo.imageLinks.thumbnail
     );
 
     $("#publicationYear").val(
-      jsonData.volumeInfo.publishedDate === undefined
-        ? "Book published year not found!"
-        : jsonData.volumeInfo.publishedDate.substring(0, 4)
+      jsonData.volumeInfo.publishedDate === undefined ?
+      "Book published year not found!" :
+      jsonData.volumeInfo.publishedDate.substring(0, 4)
     );
     $("#searchDescription").val(
-      jsonData.volumeInfo.description === undefined
-        ? "Description not found!"
-        : jsonData.volumeInfo.description
+      jsonData.volumeInfo.description === undefined ?
+      "Description not found!" :
+      jsonData.volumeInfo.description
     );
   });
   // Join us model part
 
   joinUsBranch.on("value", function (snap) {
     let data = snap.val();
-    console.log(data);
-    let obj;
-    console.log(data);
+
+
+
     Object.values(data).map((item) => {
-    //   obj = {
-    //     id: item[0],
-    //     ...item[1],
-    //   };
-     renderPage(item)
-    });
     
+      renderPage(item)
+    });
+
 
     // renderPage(obj);
-    
+
   });
   let index = 0;
+
   function renderPage(obj) {
-      index++;
+    index++;
     let joinUsPartTable = $("#vitalTable tbody");
-     let tag = `<tr>
-     <td>${index}</td>
+    let tag = `<tr>
+     <th>${index}</th>
      <td>${obj.name}</td>
      <td>${obj.email}</td>
      
      </tr> `
-     joinUsPartTable.append(tag);
-    
-   
+    joinUsPartTable.append(tag);
 
 
 
-    
+
+
+
 
   }
+
+
+  // contact us section 
+  contactUsBranch.on("value", function(snap) {
+    let data = snap.val()
+    
+
+    Object.values(data).map(item => renderContactUsSection(item))
+
+    // console.log(data)
+  })
+
+
+let indexOfContactUs = 0;
+  function renderContactUsSection(obj) {
+   let contactUsSection = $("#contact-table");
+    indexOfContactUs++;
+    let tag = `<tr>
+     <th>${indexOfContactUs}</th>
+     <td>${obj.fullName}</td>
+     <td>${obj.address}</td>
+     <td>${obj.email}</td>
+     <td>${obj.phone}</td>
+     
+     </tr> `
+
+     contactUsSection.append(tag)
+  }
+    
 });
+
+
+
+// Book Form Part
+
+
+//  $("#bookFormBtn").on("click", writeAllBookFormDataToFirebase)
+
+//  function writeAllBookFormDataToFirebase() {
+
+
+
+//  }
+ 
