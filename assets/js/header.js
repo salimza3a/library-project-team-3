@@ -1,11 +1,12 @@
-$('#join-submit-btn').on('click', processForm);
-let failBox = $('#fail-box');
+$("#join-submit-btn").on("click", processForm);
+let failBox = $("#fail-box");
 
 function processForm(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let name = $('#join-us-personal-name').val();
-    let email = $('#join-us-personal-email').val();
+  let name = $("#join-us-personal-name").val();
+  let email = $("#join-us-personal-email").val();
+
 
     if (!name) {
         failBox.text('Name is empty!');
@@ -50,31 +51,41 @@ function processForm(event) {
         return;
     }
     writeFirebase(name, email);
+   
+     name = $("#join-us-personal-name").val("");
+     email = $("#join-us-personal-email").val("");
+
 }
 
+
+
+
+let joinUsBranch = database.ref("/join_us");
 
 function writeFirebase(name, email) {
+ 
+  joinUsBranch.push().set({ name, email });
 
-    //...wrirte DB
+  //...wrirte DB
 
-    failBox.removeClass('alert-danger');
-    failBox.addClass('alert-primary');
-    failBox.text('Thanks! Your informations successfully saved');
-    failBox.fadeIn(500);
-    failBox.fadeOut(3000);
-    setTimeout(() => $('.modal').click(), 2800); //close join-us modal
-    return;
+  failBox.removeClass("alert-danger");
+  failBox.addClass("alert-primary");
+  failBox.text("Thanks! Your informations successfully saved");
+  failBox.fadeIn(500);
+  failBox.fadeOut(3000);
+  setTimeout(() => $(".modal").click(), 2800); //close join-us modal
+  return;
 }
 
-$('#hamburger-btn').on('click', () => {
-    $('.mobile-view').show(500).css('display', 'flex');
+$("#hamburger-btn").on("click", () => {
+  $(".mobile-view").show(500).css("display", "flex");
 });
 
-$('#close-mobile-view').on('click', () => {
-    $('.mobile-view').hide(500)
+$("#close-mobile-view").on("click", () => {
+  $(".mobile-view").hide(500);
 });
 
 $(function () {
-    let currentLink = `header nav a[href="./${location.pathname.split("/")[1]}"]`;
-    $(currentLink).addClass('current');
+  let currentLink = `header nav a[href="./${location.pathname.split("/")[1]}"]`;
+  $(currentLink).addClass("current");
 });
