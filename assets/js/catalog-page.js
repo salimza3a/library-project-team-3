@@ -35,3 +35,8 @@ $('.books').slick({
 
 
 //fetch data from FireBase
+
+let books;
+
+
+
