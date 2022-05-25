@@ -21,6 +21,7 @@ body {
     padding: 10px;
 }
 
+
 .book-name {
     text-align: center;
     margin-top: 47px;
@@ -157,16 +158,10 @@ body {
     text-align: center;
 }
 
-.book-det-open {
-    visibility: visible;
-}
-
 .book-details {
     display: none;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
-    height: 50%;
     background-color: var(--bg);
     position: absolute;
     left: 0;
@@ -285,11 +280,13 @@ body {
     border-radius: 5px;
     padding: 20px;
 }
-.comment-header{
+
+.comment-header {
     display: flex;
     margin-bottom: 30px;
 }
-.comment-author{
+
+.comment-author {
     margin-right: 25px;
     font-weight: bold;
 
