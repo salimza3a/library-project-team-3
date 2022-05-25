@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/catalog.css">
     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
@@ -540,14 +540,61 @@
                     </div>
 
 
-                    <div class="book-details">
-                        <div id="close-details">
-                            &lt; back
+                    <div class="book-details container">
+                        <div class="items-area">
+                            <button id="close-details">
+                                &lt; back
+                            </button>
+                            <div id="publication-year">
+                                2022
+                            </div>
+                            <div id="book-title">
+                                Birinci addim
+                            </div>
+                            <div id="added-time">
+                                13 days ago
+                            </div>
+                            <div id="author">Qaraqan</div>
+                            <div id="description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, laboriosam
+                                deserunt?
+                                Ea sint quo corrupti veniam dolores rem ratione aspernatur.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, laboriosam
+                                deserunt?
+                                Ea sint quo corrupti veniam dolores rem ratione aspernatur.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, laboriosam
+                                deserunt?
+                                Ea sint quo corrupti veniam dolores rem ratione aspernatur.
+                            </div>
+                            <div class="comments" data-comment-id="2">
+                                <form action="#" class="send-comment-area">
+                                    <input type="text" id="comment" required placeholder="Write a public comment">
+                                    <button type="submit" id="send-comment">
+                                        <img src="./assets/images/icons/comment.svg" alt="comment">
+                                    </button>
+                                </form>
+                                <div class="comments">
+                                    <div class="comment">
+                                        <div class="comment-header">
+                                            <div class="comment-author">
+                                                Anonymous
+                                            </div>
+                                            <div class="comment-date">
+                                                13:32 today
+                                            </div>
+                                        </div>
+                                        <div class="comment-content">
+                                            GOodGOod boookGOod boook boook
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div id="publication-year">
-                            2022
+                        <div class="detail-image-area">
+                            <img src="https://cdn.pixabay.com/photo/2020/03/26/19/37/poppies-4971583_960_720.jpg"
+                                id="detail-img" alt="Image">
                         </div>
-                        
                     </div>
 
                 </div>
@@ -611,7 +658,7 @@
                     </div>
                 </div>
                 <div class="footer-mobile-view">
-                    <nav>   
+                    <nav>
                         <ul>
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./catalog.html">Catalog</a></li>
@@ -628,27 +675,25 @@
     <!-- Footer-END -->
 
 
-    <!-- Bootstrap requieres -->
     <!-- Jquery 3.6.0 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    
 
-   
+
+
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    
+
     <script src="./assets/js/db.js"></script>
 
-     <!-- header.js -->
+    <!-- header.js -->
     <script src="./assets/js/header.js"></script>
 
     <!-- slick.js -->

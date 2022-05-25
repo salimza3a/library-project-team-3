@@ -36,7 +36,9 @@ $('.books').slick({
 
 //fetch data from FireBase
 
-let books;
+let books = database.ref('/books');
+
+console.log(books);
 
 
 
