@@ -22,6 +22,7 @@ body {
 }
 
 .book-name {
+    text-align: center;
     margin-top: 47px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -48,6 +49,7 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+
 
 .read-more-btn {
     width: 80%;
@@ -104,6 +106,7 @@ body {
 }
 
 .category-btn {
+    text-transform: capitalize;
     display: flex;
     background-color: transparent;
     border: none;
@@ -118,7 +121,6 @@ body {
 
 .books {
     display: flex;
-    width: 100%;
     margin-top: 50px;
     position: relative;
 }
@@ -160,7 +162,7 @@ body {
 }
 
 .book-details {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
     width: 100%;

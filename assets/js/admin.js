@@ -298,12 +298,6 @@ $(document).ready(function () {
     $("#category-added-alert").show(200);
   }
 
-  $('#searchDescription').on('input', function (){
-    $('#filled-limit').html(this.value.length);
-    if (this.value.length >= 100) {
-      $('#searchDescription').css('border-color', 'red');
-    }
-  })
 
 
 
@@ -322,38 +316,73 @@ $(document).ready(function () {
     let addBookDescription = $("#searchDescription").val();
     let addBookCategory = $("#categories").val();
 
-    if (addBookName === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addBookAuthor === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addBookImg === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addBookPublicationYear === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addIsNew === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addBookDescription === undefined) {
+    if (addBookName === '') {
       $('#bookName').attr("placeholder", "Empty!");
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
-    if (addBookCategory === undefined) {
+    if (addBookName === '') {
       $('#bookName').css('border-color', 'red');
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(500);
+      $('#book-added-alert').fadeOut(500);
       return;
     }
 
@@ -367,6 +396,11 @@ $(document).ready(function () {
       "description": addBookDescription,
       "category": addBookCategory
     });
+    $('#book-added-alert').html('The book successfully added');
+    $('#book-added-alert').removeClass('alert-danger');
+    $('#book-added-alert').addClass('alert-success');
+    $('#book-added-alert').fadeIn(500);
+    $('#book-added-alert').fadeOut(500);
 
     $("#bookName").val("");
     $("#authorName").val("");
