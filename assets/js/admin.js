@@ -119,9 +119,12 @@ $(document).ready(function () {
   // ==================================
 
   // Google BOOKS API
+
   $("#searchBookBtn").on("click", searchBook);
+  $('.founded-books').hide(100);
 
   function searchBook() {
+    $('.founded-books').show(300);
     let bookName = $("#searchThisBookName").val();
     if (bookName === "") {
       $("#searchThisBookName").val("Please fill here!");
@@ -172,52 +175,46 @@ $(document).ready(function () {
 
   $(document).on("click", ".book-item", function () {
     let jsonData = JSON.parse(decodeURIComponent($(this).data("json")));
-    console.log(jsonData);
 
     $("#bookName").val(
       jsonData.volumeInfo.title === undefined ?
-      "Title not found!" :
+      '' :
       jsonData.volumeInfo.title
     );
     $("#authorName").val(
       jsonData.volumeInfo.authors === undefined ?
-      "Author not found!" :
+      '' :
       jsonData.volumeInfo.authors
     );
 
     $("#imageUrl").val(
       jsonData.volumeInfo.imageLinks.thumbnail === undefined ?
-      "Book image not found!" :
+      '' :
       jsonData.volumeInfo.imageLinks.thumbnail
     );
 
     $("#publicationYear").val(
       jsonData.volumeInfo.publishedDate === undefined ?
-      "Book published year not found!" :
+      '' :
       jsonData.volumeInfo.publishedDate.substring(0, 4)
     );
     $("#searchDescription").val(
       jsonData.volumeInfo.description === undefined ?
-      "Description not found!" :
+      '' :
       jsonData.volumeInfo.description
     );
   });
+
+
   // Join us model part
 
   joinUsBranch.on("value", function (snap) {
     let data = snap.val();
-
-
-
     Object.values(data).map((item) => {
-
       renderPage(item)
     });
-
-
-    // renderPage(obj);
-
   });
+
   let index = 0;
 
   function renderPage(obj) {
@@ -230,20 +227,12 @@ $(document).ready(function () {
      
      </tr> `
     joinUsPartTable.append(tag);
-
-
-
-
-
-
-
   }
 
 
   // contact us section 
   contactUsBranch.on("value", function (snap) {
     let data = snap.val()
-    console.log(data);
     Object.values(data).map(item => renderContactUsSection(item));
   })
 
@@ -291,64 +280,104 @@ $(document).ready(function () {
 
 
 
-
-
-
-
   // Add new Item to catalog and write them to firebase
   $("#addBookCatalogBtn").on("click", addNewCatalogItem);
-  let bookFormCatalogBranch = database.ref("/book_catalog");
+  let bookFormCatalogBranch = database.ref("/categories");
+  $("#category-added-alert").hide();
 
   function addNewCatalogItem(e) {
     e.preventDefault();
-
     let newItem = $("#newCatalogItem").val();
-
-    $("#exampleFormControlSelect1").append(`<option value=""> ${newItem} </option>`)
+    $("#exampleFormControlSelect1").append(`<option value=""> ${newItem} </option>`);
 
     bookFormCatalogBranch.push().set({
-      "catalog-name": newItem
+      "catalog_name": newItem
     });
-
     newItem = $("#newCatalogItem").val("");
-
+    setTimeout(() => $('.modal').click(), 800);
+    $("#category-added-alert").show(200);
   }
 
+  $('#searchDescription').on('input', function (){
+    $('#filled-limit').html(this.value.length);
+    if (this.value.length >= 100) {
+      $('#searchDescription').css('border-color', 'red');
+    }
+  })
 
 
 
   // Book Form Part
-  let bookFormBranch = database.ref("/book_form")
-  $("#bookFormBtn").on("click", writeAllBookFormDataToFirebase)
+  let bookFormBranch = database.ref("/books");
 
-  function writeAllBookFormDataToFirebase() {
+  $("#bookFormBtn").on("click", writeBookDataToDatabase);
 
-    let bookFormBookName = $("#bookName").val();
-    let bookFormAuthorName = $("#authorName").val();
-    let bookFormImageUrl = $("#imageUrl").val();
-    let bookFormPublicationYear = $("#publicationYear").val();
-    let bookFormNewCheckBox = $("#formCheck");
-    let bookFormBookDescription = $("#searchDescription").val()
-    let bookFormCatalogSelect = $("#exampleFormControlSelect1").val();
+  function writeBookDataToDatabase() {
+
+    let addBookName = $("#bookName").val();
+    let addBookAuthor = $("#authorName").val();
+    let addBookImg = $("#imageUrl").val();
+    let addBookPublicationYear = $("#publicationYear").val();
+    let addIsNew = $("#formCheck").is(':checked');
+    let addBookDescription = $("#searchDescription").val();
+    let addBookCategory = $("#categories").val();
+
+    if (addBookName === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addBookAuthor === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addBookImg === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addBookPublicationYear === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addIsNew === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addBookDescription === undefined) {
+      $('#bookName').attr("placeholder", "Empty!");
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
+    if (addBookCategory === undefined) {
+      $('#bookName').css('border-color', 'red');
+      return;
+    }
 
 
     bookFormBranch.push().set({
-      "name": bookFormBookName,
-      "author": bookFormAuthorName,
-      "image": bookImageUrl,
-      "publication year": bookFormPublicationYear,
-      "isNew": bookFormNewCheckBox,
-      "description": bookDescription,
-      "catalog name": bookFormCatalogSelect
-    })
+      "name": addBookName,
+      "author": addBookAuthor,
+      "image": addBookImg,
+      "publication_year": addBookPublicationYear,
+      "isNew": addIsNew,
+      "description": addBookDescription,
+      "category": addBookCategory
+    });
 
-    bookFormBookName = $("#bookName").val("");
-    bookFormAuthorName = $("#authorName").val("");
-    bookFormImageUrl = $("#imageUrl").val("");
-    bookFormPublicationYear = $("#publicationYear").val("");
-    bookFormNewCheckBox = $("#formCheck");
-    bookFormBookDescription = $("#searchDescription").val("")
-    bookFormCatalogSelect = $("#exampleFormControlSelect1").val("");
+    $("#bookName").val("");
+    $("#authorName").val("");
+    $("#imageUrl").val("");
+    $("#publicationYear").val("");
+    $("#formCheck").prop('checked', false);
+    $("#searchDescription").val("")
+    $("#exampleFormControlSelect1").val("");
+
+    $('.bookForm .form-control input').css('border-color', 'green');
+
   }
 
 
@@ -360,4 +389,13 @@ $(document).ready(function () {
     bookContent.html(bookData.bookDescription)
     bookImage.attr("src", bookData.bookImageUrl)
   });
+
+  function fetchCategories() {
+    let catalogBranch = database.ref('/categories');
+    catalogBranch.on('value', function (data) {
+      $('#categories').html(Object.values(data.val()).map(item => `<option value="${item.catalog_name}">${item.catalog_name}</option>`));
+    })
+  }
+  fetchCategories();
+
 });

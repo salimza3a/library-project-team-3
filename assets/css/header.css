@@ -11,6 +11,9 @@ header {
 .modal-backdrop{
     display: none;
 }
+.modal-content{
+    box-shadow: 0 0 10px #000;
+}
 
 #header li {
     list-style: none;
