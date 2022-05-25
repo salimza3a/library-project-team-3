@@ -24,5 +24,15 @@ main {
 #content {
     line-height: 196.19%;
     margin-right: 50px;
+    width: 50%;
+}
+
+#image {
+    width: 49%;
+}
+
+#image img {
+    border-radius: 5px;
+    max-width: 100%;
 }
 

@@ -264,15 +264,86 @@ let indexOfContactUs = 0;
 });
 
 
+// About Store Part
+
+$("#aboutStoreBtn").on("click", writeDatasToFirebase)
+// Please give an alert it  just works when user fill in forms completely
+let aboutStoreBranch = database.ref("/about-store")
+
+function writeDatasToFirebase() {
+    let bookTitle = $("#bookTitle").val();
+    let bookImageUrl = $("#bookImageUrl").val();
+    let bookDescription = $("#bookDescription").val();
+    console.log(bookTitle, bookImageUrl, bookDescription)
+    aboutStoreBranch.update({
+        bookTitle,
+        bookImageUrl,
+        bookDescription
+    })
+    bookTitle = $("#bookTitle").val("");
+    bookImageUrl = $("#bookImageUrl").val("");
+    bookDescription = $("#bookDescription").val("");
+}
+
+
+
+
+
+
+
+// Add new Item to catalog and write them to firebase
+$("#addBookCatalogBtn").on("click", addNewCatalogItem) 
+let bookFormCatalogBranch = database.ref("/book_catalog")
+function addNewCatalogItem(e) {
+  e.preventDefault()
+  
+ let newItem =   $("#newCatalogItem").val();
+
+ $("#exampleFormControlSelect1").append(`<option value=""> ${newItem} </option>`)
+
+ bookFormCatalogBranch.push().set({"catalog-name": newItem})
+ 
+
+ newItem = $("#newCatalogItem").val("")
+
+
+}
+
+// Write catalog name to admin page from firabase
+
+
+
+// 
+
+
+
+
 
 // Book Form Part
+let bookFormBranch = database.ref("/book_form")
+ $("#bookFormBtn").on("click", writeAllBookFormDataToFirebase)
+
+ function writeAllBookFormDataToFirebase() {
+
+  let bookFormBookName = $("#bookName").val();
+  let bookFormAuthorName = $("#authorName").val();
+  let bookFormImageUrl = $("#imageUrl").val();
+  let bookFormPublicationYear = $("#publicationYear").val();
+  let bookFormNewCheckBox = $("#formCheck");
+  let bookFormBookDescription = $("#searchDescription").val()
+let bookFormCatalogSelect = $("#exampleFormControlSelect1").val();
 
 
-//  $("#bookFormBtn").on("click", writeAllBookFormDataToFirebase)
+  bookFormBranch.push().set({"name": bookFormBookName, "author": bookFormAuthorName, 
+  "image":bookImageUrl, "publication year": bookFormPublicationYear,
+"isNew": bookFormNewCheckBox, "description": bookDescription, "catalog name": bookFormCatalogSelect})
 
-//  function writeAllBookFormDataToFirebase() {
-
-
-
-//  }
+ bookFormBookName = $("#bookName").val("");
+   bookFormAuthorName = $("#authorName").val("");
+   bookFormImageUrl = $("#imageUrl").val("");
+   bookFormPublicationYear = $("#publicationYear").val("");
+   bookFormNewCheckBox = $("#formCheck");
+   bookFormBookDescription = $("#searchDescription").val("")
+   bookFormCatalogSelect = $("#exampleFormControlSelect1").val("");
+ }
  
