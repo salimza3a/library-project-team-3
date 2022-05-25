@@ -12,7 +12,10 @@ $(document).ready(function () {
 
 
   booksBranch.on('value', function (books) {
+
     let arr_book = Object.values(books.val());
+    $('.books').html('');
+
     $('.books').html(arr_book.map(item => `
   <div class="book">
   <div class="new-badge ${item.isNew === true ? 'isNew' : 'isOld'}">
@@ -32,6 +35,32 @@ $(document).ready(function () {
     </button>
   </div>
 `));
+
+    $(document).on('click', '.category-btn', function () {
+      let categoryName = this.value;
+      let filteredBooks = arr_book.filter(item => item.category == categoryName);
+      console.log(filteredBooks);
+      $('.books').html(filteredBooks.map(item => `
+  <div class="book">
+  <div class="new-badge ${item.isNew === true ? 'isNew' : 'isOld'}">
+      New
+   </div>
+    <div class="book-image">
+      <img src="${item.image}" width="134px" height="190px" id="thumbnail" alt="Book preview"/>
+    </div>
+    <div class="book-name">
+        ${item.name}
+    </div>
+    <div class="book-author">
+        ${item.author}
+    </div>
+    <button type="button" class="read-more-btn" data-json="${encodeURIComponent(JSON.stringify(item))}">
+        READ MORE
+    </button>
+  </div>
+  `))
+    });
+
 
     $('.books').slick({
       prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
@@ -68,6 +97,7 @@ $(document).ready(function () {
       ]
     })
   });
+
   let jsonData;
   $(document).on('click', '.read-more-btn', function () {
 
@@ -137,5 +167,6 @@ $(document).ready(function () {
   function fetchComments() {
     return '' //...
   }
+
 
 });
