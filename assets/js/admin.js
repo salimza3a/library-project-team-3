@@ -2,6 +2,7 @@ $(document).ready(function () {
   //  =========================
   //   LOGIN PROCESSING CODES.
   // ==========================
+  let current = moment();
 
   let adminLoginDataBranch = database.ref('/admin');
   let adminUsername;
@@ -394,7 +395,8 @@ $(document).ready(function () {
       "publication_year": addBookPublicationYear,
       "isNew": addIsNew,
       "description": addBookDescription,
-      "category": addBookCategory
+      "category": addBookCategory,
+      "added_time": moment(current).format("Do MMMM YYYY"),
     });
     $('#book-added-alert').html('The book successfully added');
     $('#book-added-alert').removeClass('alert-danger');
