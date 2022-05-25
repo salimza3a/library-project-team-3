@@ -1,13 +1,9 @@
 /* tablets */
 @media screen and (max-width: 992px) {
-    header {
-        margin-top: 16px;
-    }
-
     #header nav {
         display: none;
     }
-
+    
     #hamburger-btn {
         display: inline-block;
     }
@@ -103,6 +99,24 @@
         width: 80%;
         padding: 15px;
     }
+    .search-items-container{
+        flex-direction: column;
+    }
+    .founded-book{
+        margin-top: 50px;
+    }
+    .search-items{
+        margin-right: 0 !important;
+    }
+    #searchThisBookName{
+        width: 100%;
+    }
+    .form-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* mobile */
@@ -179,5 +193,22 @@
     .slick-prev,
     .slick-next{
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #contact-us-items .form-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #contact-us-items .form-row input {
+        width: 100%;
+        margin-right: 30px !important;
+    }
+    #contact .container{
+        padding-right: 25px !important;
     }
 }

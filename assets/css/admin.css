@@ -7,6 +7,10 @@ body {
     height: 100vh !important;
 }
 
+body{
+    background-color: var(--bg);
+}
+
 a {
     color: #FFF;
 }

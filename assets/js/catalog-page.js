@@ -2,7 +2,7 @@ $('.books').slick({
   prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
   nextArrow: `<button type="button" class="slick-next"><img src="./assets/images/icons/previous.svg"/></button>`,
   dots: false,
-  speed: 500,
+  speed: 300,
   autoplay: true,
   slidesToShow: 5,
   slidesToScroll: 1,

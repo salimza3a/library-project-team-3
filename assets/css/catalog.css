@@ -1,11 +1,12 @@
 body {
     font-family: var(--main-font);
     position: relative;
+    background-color: var(--bg);
 }
 
 
 #catalog {
-    margin-top: 119px;
+    margin-top: 200px;
 }
 
 .book {
@@ -125,7 +126,7 @@ body {
 .slick-prev,
 .slick-next {
     position: absolute;
-    z-index: 999;
+    z-index: 50;
     background-color: transparent;
     border: none;
     outline: none;

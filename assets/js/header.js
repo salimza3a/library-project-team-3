@@ -2,71 +2,74 @@ $("#join-submit-btn").on("click", processForm);
 let failBox = $("#fail-box");
 
 function processForm(event) {
+
   event.preventDefault();
 
   let name = $("#join-us-personal-name").val();
   let email = $("#join-us-personal-email").val();
 
 
-    if (!name) {
-        failBox.text('Name is empty!');
-        failBox.fadeIn(600);
-        failBox.fadeOut(2500);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    if (!email) {
-        failBox.text('Email is empty!');
-        failBox.fadeIn(600);
-        failBox.fadeOut(2500);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    if (!name && !email) {
-        failBox.text('Email & Name are empty!');
-        failBox.fadeIn(600);
-        failBox.fadeOut(2500);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    if (name.length >= 20) {
-        failBox.text('The Name greater than 20 character!');
-        failBox.fadeIn(600);
-        failBox.fadeOut(2500);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    if (email.length >= 35) {
-        failBox.text('The Email greater than 35 Character');
-        failBox.fadeIn(600);
-        failBox.fadeOut(2500);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    if (email.indexOf('@') === -1) {
-        failBox.text('Invalid Email! Example: Jeff@gmail.com');
-        failBox.fadeIn(500);
-        failBox.fadeOut(3000);
-        failBox.addClass('alert-danger');
-        return;
-    }
-    writeFirebase(name, email);
-   
-     name = $("#join-us-personal-name").val("");
-     email = $("#join-us-personal-email").val("");
+  if (!name) {
+    failBox.text('Name is empty!');
+    failBox.fadeIn(600);
+    failBox.fadeOut(2500);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  if (!email) {
+    failBox.text('Email is empty!');
+    failBox.fadeIn(600);
+    failBox.fadeOut(2500);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  if (!name && !email) {
+    failBox.text('Email & Name are empty!');
+    failBox.fadeIn(600);
+    failBox.fadeOut(2500);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  if (name.length >= 20) {
+    failBox.text('The Name greater than 20 character!');
+    failBox.fadeIn(600);
+    failBox.fadeOut(2500);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  if (email.length >= 35) {
+    failBox.text('The Email greater than 35 Character');
+    failBox.fadeIn(600);
+    failBox.fadeOut(2500);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  if (email.indexOf('@') === -1) {
+    failBox.text('Invalid Email! Example: Jeff@gmail.com');
+    failBox.fadeIn(500);
+    failBox.fadeOut(3000);
+    failBox.addClass('alert-danger');
+    return;
+  }
+  writeFirebase(name, email);
+
+  name = $("#join-us-personal-name").val("");
+  email = $("#join-us-personal-email").val("");
 
 }
 
-
-
+// Working with DataBase area
 
 let joinUsBranch = database.ref("/join_us");
 
 function writeFirebase(name, email) {
- 
-  joinUsBranch.push().set({ name, email });
+  joinUsBranch.push().set({
+    name,
+    email
+  }); //write informations to database
 
-  //...wrirte DB
+  $("#join-us-personal-name").val(''); //clear name
+  $("#join-us-personal-email").val(''); //clear email
 
   failBox.removeClass("alert-danger");
   failBox.addClass("alert-primary");
@@ -78,7 +81,7 @@ function writeFirebase(name, email) {
 }
 
 $("#hamburger-btn").on("click", () => {
-  $(".mobile-view").show(500).css("display", "flex");
+  $(".mobile-view").show(500).css("display", "block");
 });
 
 $("#close-mobile-view").on("click", () => {

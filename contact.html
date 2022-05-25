@@ -94,7 +94,7 @@
     </header>
 
     <!-- Main-START  from(index.html) -->
-    <main>
+    <main id="contact">
         <div class="container">
             <div id="contact-us-title">
                 Contact Us
@@ -102,28 +102,31 @@
             <div class="row">
                 <div class="container">
                     <form>
-                        <div class="form-row">
-                          <div class="col">
-                            <input type="text" id="fullname" class="form-control" placeholder="Full Name" required>
-                          </div>
-                          <div class="col">
-                            <input type="email" id="email" class="form-control" placeholder="Email" required>
-                          </div>
+                        <div id="contact-us-items">
+                            <div class="form-row">
+                                <div class="col col-lg-6 col-sm-12">
+                                    <input type="text" id="fullname" class="form-control" placeholder="Full Name"
+                                        required>
+                                </div>
+                                <div class="col col-lg-6 col-sm-12">
+                                    <input type="email" id="email" class="form-control" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col col-lg-6 col-sm-12">
+                                    <input type="text" id="address" class="form-control" placeholder="Address" required>
+                                </div>
+                                <div class="col col-lg-6 col-sm-12">
+                                    <input type="text" id="phone" class="form-control" placeholder="Phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-6 col-lg-6 col-sm-12">
+                                    <input type="submit" id="contactUsBtn" class="form-control" value="Send">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col">
-                              <input type="text" id="address" class="form-control" placeholder="Address" required>
-                            </div>
-                            <div class="col">
-                              <input type="text" id="phone" class="form-control" placeholder="Phone" required>
-                            </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="col-6">
-                              <input type="submit" id="contactUsBtn" class="form-control" value="Send">
-                            </div>
-                          </div>
-                      </form>
+                    </form>
                 </div>
             </div>
         </div>
@@ -217,12 +220,12 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
- 
+
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 
     <script src="./assets/js/db.js"></script>
-       <!-- header.js -->
+    <!-- header.js -->
     <script src="./assets/js/header.js"></script>
     <!-- contact.js -->
     <script src="./assets/js/contact.js"></script>

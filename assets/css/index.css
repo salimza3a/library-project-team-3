@@ -1,5 +1,6 @@
 body {
     font-family: var(--main-font);
+    background-color: var(--bg);
 }
 
 /* Books from a to z area START */
@@ -10,7 +11,7 @@ body {
 }
 
 #books-from {
-    margin-top: 137px;
+    margin-top: 150px;
 }
 
 #cover-image {
