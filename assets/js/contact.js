@@ -11,11 +11,28 @@ function processForm(e){
     let address = $("#address").val();
     let phone = $("#phone").val()
 
+    if(fullName.trim() == "" || email.trim() == "" || address.trim() == "" ||  phone.trim() == "") {
+        $(".contact-failbox").addClass("alert-danger")
+        $(".contact-failbox").html("<h4>Error </h4>  <p>Please check all information again </p>")
+        $(".contact-failbox").fadeIn(500)
+        $(".contact-failbox").fadeOut(1500)
+        return 
 
-    contactUsBranch.push().set({fullName,email,address,phone})
+    } else {
+        contactUsBranch.push().set({fullName,email,address,phone})
+        fullName = $("#fullname").val("");
+        email = $("#email").val("");
+        address = $("#address").val("");
+        phone = $("#phone").val("")
+   
+   
+    }
     
-     fullName = $("#fullname").val("");
-     email = $("#email").val("");
-     address = $("#address").val("");
-     phone = $("#phone").val("")
+
+    
+    
+    
+     
+     
+
 }
