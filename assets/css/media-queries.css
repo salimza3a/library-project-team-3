@@ -204,10 +204,7 @@
         flex-direction: column;
         flex-wrap: wrap;
     }
-    #contact-us-items .form-row input {
-        width: 100%;
-        margin-right: 30px !important;
-    }
+    
     #contact .container{
         padding-right: 25px !important;
     }
