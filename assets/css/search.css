@@ -43,10 +43,21 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     padding: 40px;
     margin-top: 90px;
-    width: 801px;
-    height: 504px;
-    margin: 10px;
+    width: 950px !important;
+    height: 504px !important;
+    overflow: visible;
 
+}
+
+.slick-slide {
+    height: auto !important;
+  }
+
+#results {
+    display: flex !important;
+    width: 950px;
+    height: 504px;
+    position: relative;
 }
 
 #book-title {
@@ -98,23 +109,23 @@ body {
     margin-bottom: 40px;
 }
 
-#results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .book-not-found {
     background-color: #FFF;
     box-shadow: 0 0 10px #000;
-    padding: 60px 30px;
+    width: 500px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     border: 2px solid #ccc;
-    position: relative;
-    margin-top: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 100px auto;
 }
 
 .book-not-found p {
@@ -141,4 +152,25 @@ body {
 
 #close:hover {
     background-color: rgba(0, 0, 0, 0.40);
+}
+.slick-prev,
+.slick-next{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    z-index: 9999;
+}
+
+.slick-prev{
+    top: 70%;
+    right: -55px;
+}
+.slick-next{
+    top: 70%;
+    left: -55px;
+}
+.slick-slide{
+    width: 950px !important;
+    height: 504px !important;
 }

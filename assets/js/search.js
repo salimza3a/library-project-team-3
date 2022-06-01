@@ -1,6 +1,3 @@
-//results
-
-
 let books;
 let booksBranch = database.ref('/books');
 
@@ -8,20 +5,59 @@ booksBranch.on("value", function (snap) {
     books = Object.values(snap.val());
 });
 
+
+//slick slider bug, so first search when slick slider working perfect but second search when slick slider occurred(crashed).
+let lastSearchBookName;
+
+function lastSearchBook(bookname, isSecond) {
+    let itemName = `${localStorage.getItem('last-bookname')}`;
+
+    if (isSecond === true) {
+        localStorage.setItem('last-bookname', bookname);
+        window.location.reload();
+        return;
+    }
+    if (itemName === null) {
+        localStorage.setItem('last-bookname', 'bookName');
+        return;
+    }
+    if(itemName !== null){
+        setTimeout(() => {
+            $('#book-name').val(itemName);
+            $('#search-book-name-btn').click();
+        }, 1600);
+    }
+
+}
+
+lastSearchBook();
+
 $(document).ready(function () {
+    let printCount = 0;
 
-
-    $('#results').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: `<button>PREVIOUS</button>`,
-        nextArrow: `<button>NEXT</button>`,
-        speed: 300,
-        autoplay: true,
-    });
-
-
+    function initSlider() {
+        $('#results').slick({
+            variableWidth: true,
+            variableHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
+            nextArrow: `<button type="button" class="slick-next"><img src="./assets/images/icons/previous.svg"/></button>`,
+            speed: 300,
+            // autoplay: true,
+            centerMode: true,
+            responsive: [{
+                breakpoint: 500,
+                settings: {
+                    variableWidth: true,
+                    variableHeight: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+        });
+    }
 
     $('#search-book-name-btn').on('click', searchBook);
 
@@ -38,6 +74,7 @@ $(document).ready(function () {
             }, 1800);
             return;
         } else if (books === undefined) {
+            alert('wait')
             return;
         }
 
@@ -51,6 +88,7 @@ $(document).ready(function () {
         }
 
         if (results.length === 1) {
+            $('#results').html('');
             $('#results').html(results.map(book =>
                 ` 
             <div id="result">
@@ -73,6 +111,7 @@ $(document).ready(function () {
             `));
             return;
         } else if (results.length === 0) {
+            $('#results').html('');
             $('#results').html(`
                 <div class="book-not-found">
                     <p>The book "${bookTitle}" not found in our store.</p>
@@ -81,9 +120,11 @@ $(document).ready(function () {
             `);
             return;
         } else {
+            $('#results').html('');
+            printCount === 1 ? lastSearchBook(bookTitle, true) : '';
             $('#results').html(results.map(book =>
                 ` 
-                <div id="result" class="aslider">
+                <div id="result">
                     <div id="result-image">
                         <img src="${book.image}" alt="Founded Result Image">
                     </div>
@@ -101,12 +142,10 @@ $(document).ready(function () {
                     </div>
                 </div> 
             `));
+            initSlider();
+            printCount++;
+            console.log(printCount);
             return;
         }
     }
 });
-
-// prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
-// nextArrow: `<button type="button" class="slick-next"><img src="./assets/images/icons/previous.svg"/></button>`,
-// speed: 300,
-// autoplay: true,

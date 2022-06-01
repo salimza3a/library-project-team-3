@@ -135,7 +135,7 @@
         text-align: start;
 
     }
-
+    
     .scroll-bar ul {
         height: 40px;
     }
@@ -198,8 +198,11 @@
         width: 100% !important;
     }
     #result {
-        flex-direction: column;
-        height: auto !important;
+        flex-direction: column !important;
+        width: 500px !important;
+        height: 900px !important;
+        box-shadow: none !important;
+        position: relative;
     }
 
     #result-image {
@@ -213,6 +216,19 @@
     }
     #result-details{
         text-align: center;
+    }
+    #results{
+        width: 500px !important;
+        height: 1100px !important;
+        background-color: #FFF;
+        position: relative;
+    }
+    #book-desc{
+        width: 450px !important;
+        position: absolute;
+        bottom: -450px;
+        right: 250px;
+        z-index: 99999999999999999999999;
     }
 }
 
