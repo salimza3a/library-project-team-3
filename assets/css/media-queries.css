@@ -3,7 +3,7 @@
     #header nav {
         display: none;
     }
-    
+
     #hamburger-btn {
         display: inline-block;
     }
@@ -89,29 +89,36 @@
         padding-top: 39px;
         padding-bottom: 7px;
     }
-    .catalog-header{
+
+    .catalog-header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #categories{
+
+    #categories {
         margin-top: 20px;
         width: 80%;
         padding: 15px;
     }
-    .search-items-container{
+
+    .search-items-container {
         flex-direction: column;
     }
-    .founded-book{
+
+    .founded-book {
         margin-top: 50px;
     }
-    .search-items{
+
+    .search-items {
         margin-right: 0 !important;
     }
-    #searchThisBookName{
+
+    #searchThisBookName {
         width: 100%;
     }
-    .form-items{
+
+    .form-items {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -186,12 +193,33 @@
     .social-bar-items {
         text-align: center;
     }
+    #book-title{
+        text-align: center;
+        width: 100% !important;
+    }
+    #result {
+        flex-direction: column;
+        height: auto !important;
+    }
 
+    #result-image {
+        margin-right: 0 !important;
+        margin-bottom: 40px;
+    }
+
+    #result-image>img {
+        width: 273.64px !important;
+        height: 388px !important;
+    }
+    #result-details{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+
     .slick-prev,
-    .slick-next{
+    .slick-next {
         display: none !important;
     }
 }
@@ -204,8 +232,40 @@
         flex-direction: column;
         flex-wrap: wrap;
     }
-    
-    #contact .container{
+
+    #contact .container {
         padding-right: 25px !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #search-area {
+        flex-direction: column;
+    }
+
+    #search-area #title {
+        text-align: center;
+    }
+
+    #form form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #form form * {
+        width: 100%;
+    }
+
+    #form {
+        margin-right: 0 !important;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    #result{
+        width: auto !important;
+        overflow-x: hidden;
     }
 }

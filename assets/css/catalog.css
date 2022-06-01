@@ -31,7 +31,10 @@ body {
     font-weight: 700;
     font-size: 14px;
     color: #241400;
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .book-author {
@@ -44,6 +47,10 @@ body {
     color: #241400;
     margin-bottom: 16px;
     margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .book-image {
@@ -99,6 +106,7 @@ body {
     display: flex;
     align-items: center;
     overflow-x: auto;
+    justify-content: flex-end;
 }
 
 #catalog-title {
