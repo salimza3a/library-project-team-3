@@ -3,7 +3,7 @@
 
 $('#contactUsBtn').on('click', processForm);
 
-let contactUsBranch = database.ref("/contact_us")
+let contactUsBranch = database.ref("/contact_us");
 
 function processForm(e) {
     e.preventDefault();

@@ -125,10 +125,12 @@ $(document).ready(function () {
   $('.founded-books').hide(100);
 
   function searchBook() {
-    $('.founded-books').show(300);
+
     let bookName = $("#searchThisBookName").val();
     if (bookName === "") {
-      $("#searchThisBookName").val("Please fill here!");
+      $("#searchThisBookName").attr("placeholder", "Please fill here!");
+      $('#searchThisBookName').css('border-color', 'red');
+      setTimeout(() => ($('#searchThisBookName').css('border-color', 'rgba(57, 31, 0, 0.48)')), 2000);
       return;
     }
 
@@ -136,6 +138,7 @@ $(document).ready(function () {
     let data = [];
     let booksContainerDiv = $(".founded-books");
     let idx = 0;
+    booksContainerDiv.show(500);
 
     function incrementIdx() {
       idx++;
@@ -172,6 +175,15 @@ $(document).ready(function () {
         )
       );
     });
+
+    setTimeout(() => {
+      booksContainerDiv.prepend(`
+    <div id="close-founded-books">
+      <span><i class="fa fa-close"></i></span>
+    </div>
+    `);
+      $("#close-founded-books").on('click', () => $('.founded-books').hide(500));
+    }, 1200);
   }
 
   $(document).on("click", ".book-item", function () {
@@ -231,7 +243,7 @@ $(document).ready(function () {
   }
 
 
-  // contact us section 
+  let contactUsBranch = database.ref("/contact_us");
   contactUsBranch.on("value", function (snap) {
     let data = snap.val()
     Object.values(data).map(item => renderContactUsSection(item));
@@ -346,7 +358,7 @@ $(document).ready(function () {
     } else if (!addBookPublicationYear) {
       printErrorMsg('publicationYear');
       return;
-    } else if (!addIsNew) {
+    } else if (!addBookDescription) {
       printErrorMsg('searchDescription');
       return;
     } else if (!addBookCategory) {
@@ -412,3 +424,16 @@ $(document).ready(function () {
   fetchCategories();
 
 });
+
+//mobile hamburger menu code
+
+$('#close-mobile-menu').on('click', function () {
+  $('#mobile-view-menu').hide(500);
+});
+$('#mobile-menu-open').on('click', function () {
+  $('#mobile-view-menu').show(500);
+});
+
+$('.mobile-link').on('click', function () {
+  $('#mobile-view-menu').hide(500);
+})
