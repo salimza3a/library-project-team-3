@@ -3,7 +3,7 @@
     #header nav {
         display: none;
     }
-    
+
     #hamburger-btn {
         display: inline-block;
     }
@@ -89,33 +89,57 @@
         padding-top: 39px;
         padding-bottom: 7px;
     }
-    .catalog-header{
+
+    .catalog-header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #categories{
+
+    #categories {
         margin-top: 20px;
         width: 80%;
         padding: 15px;
     }
-    .search-items-container{
+
+    .search-items-container {
         flex-direction: column;
     }
-    .founded-book{
+
+    .founded-book {
         margin-top: 50px;
     }
-    .search-items{
+
+    .search-items {
         margin-right: 0 !important;
     }
-    #searchThisBookName{
+
+    #searchThisBookName {
         width: 100%;
     }
-    .form-items{
+
+    .form-items {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    #about-container{
+        margin-top: 190px;
+    }
+    #about-title{
+        display: none;
+    }
+    #about-title-mobile {
+        display: block !important;
+    }
+    #about-boxes{
+        flex-direction: column-reverse;
+    }
+    #about-boxes #content{
+        margin-right: 0 !important;
+        text-align: center;
+        margin-top: 60px;
     }
 }
 
@@ -128,7 +152,7 @@
         text-align: start;
 
     }
-
+    
     .scroll-bar ul {
         height: 40px;
     }
@@ -186,12 +210,49 @@
     .social-bar-items {
         text-align: center;
     }
+    #book-title{
+        text-align: center;
+        width: 100% !important;
+    }
+    #result {
+        flex-direction: column !important;
+        width: 500px !important;
+        height: 900px !important;
+        box-shadow: none !important;
+        position: relative;
+    }
 
+    #result-image {
+        margin-right: 0 !important;
+        margin-bottom: 40px;
+    }
+
+    #result-image>img {
+        width: 273.64px !important;
+        height: 388px !important;
+    }
+    #result-details{
+        text-align: center;
+    }
+    #results{
+        width: 500px !important;
+        height: 1100px !important;
+        background-color: #FFF;
+        position: relative;
+    }
+    .slick-slider #book-desc{
+        width: 450px !important;
+        position: absolute;
+        bottom: -450px;
+        right: 250px;
+        z-index: 99999999999999999999999;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+
     .slick-prev,
-    .slick-next{
+    .slick-next {
         display: none !important;
     }
 }
@@ -200,15 +261,57 @@
     #contact-us-items .form-row {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    #contact-us-items .form-row input {
-        width: 100%;
-        margin-right: 30px !important;
+    #email{
+        margin-left: 9px !important;
     }
-    #contact .container{
+
+    #contact .container {
         padding-right: 25px !important;
+    }
+    #phone{
+        margin-left: 9px !important;
+    }
+    .iti__selected-flag{
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+    #contactUsBtn{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #search-area {
+        flex-direction: column;
+    }
+
+    #search-area #title {
+        text-align: center;
+    }
+
+    #form form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #form form * {
+        width: 100%;
+    }
+
+    #form {
+        margin-right: 0 !important;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    #result{
+        width: auto !important;
+        overflow-x: hidden;
     }
 }

@@ -24,15 +24,31 @@ main {
 #content {
     line-height: 196.19%;
     margin-right: 50px;
-    width: 50%;
+    flex: 6;
 }
 
 #image {
-    width: 49%;
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #image img {
     border-radius: 5px;
     max-width: 100%;
+    width: 570px;
+    height: 310px;
 }
 
+#about-container {
+    margin-top: 170px;
+}
+
+#about-title-mobile {
+    text-align: center;
+    display: none;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 196.19%;
+}

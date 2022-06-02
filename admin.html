@@ -26,7 +26,6 @@
         <div class="login-logo">
             <img src="./assets/images/logoWhite.svg" alt="Logo">
         </div>
-
         <div class="d-flex justify-content-center align-items-center text-center">
             <div class="admin-form">
                 <h1 id="header">
@@ -79,6 +78,57 @@
             <img src="./assets/images/icons/joinUs.svg" class="mr-2" alt="Admin">
             <span>Admin</span>
         </div>
+        <div id="mobile-menu-open">
+            <div class="open-line">
+
+            </div>
+            <div class="open-line">
+
+            </div>
+            <div class="open-line">
+
+            </div>
+        </div>
+        <div id="mobile-logo">
+            <img src="./assets/images/logoRed.svg" alt="Mobile Logo">
+        </div>
+
+        <div id="mobile-view-menu">
+            <div id="mobile-menu">
+                <div class="mobile-logo">
+                    <img src="./assets/images/logoWhite.svg" alt="Logo">
+                </div>
+
+                <div id="close-mobile-menu">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L26 26M26 1L1 26" stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <div class="lists mobile d-flex flex-column justify-content-center">
+
+                    <a href="#home" class="mobile-link">
+                        <img src="./assets/images/icons/admin-panel-item.svg"> Home
+                    </a>
+
+                    <a href="#about" class="mobile-link">
+                        <img src="./assets/images/icons/admin-panel-item.svg"> About
+                    </a>
+
+                    <a href="#join-us" class="mobile-link">
+                        <img src="./assets/images/icons/admin-panel-item.svg"> Join Us
+                    </a>
+
+                    <a href="#contact" class="mobile-link">
+                        <img src="./assets/images/icons/admin-panel-item.svg"> Contact
+                    </a>
+
+                    <button id="admin-logout" class="mobile-link">
+                        <img src="./assets/images/icons/admin-panel-item.svg"> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <div class="main">
             <div id="home">
@@ -116,50 +166,55 @@
                     </div>
                     <div class="form-check mb-2 mr-sm-2">
                         <input class="form-check-input" type="checkbox" id="formCheck">
-                        <label class="form-check-label"  for="formCheck">
+                        <label class="form-check-label" for="formCheck">
                             New
                         </label>
                     </div>
 
                     <div class="form-group">
                         <label for="searchDescription"> Description</label>
-                        <textarea class="form-control" id="searchDescription" rows="3" placeholder="About book" maxlength="100"></textarea>
+                        <textarea class="form-control" id="searchDescription" rows="3" placeholder="About book"
+                            maxlength="100"></textarea>
                         <span id="filled-limit">0</span>
                         <span>&frasl;</span>
                         <span>200</span>
-                        
+
                     </div>
                     <!-- Add catalog starting -->
                     <span>Add new catalog</span>
-                    <button type="button" class="btn " data-toggle="modal" data-target=".bd-example-modal-sm"> <span><i class="fa-solid fa-plus"></i></span></button>
+                    <button type="button" class="btn " data-toggle="modal" data-target=".bd-example-modal-sm"> <span><i
+                                class="fa-solid fa-plus"></i></span></button>
 
-                    <div class="modal fade bd-example-modal-sm " id="modalBox" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-sm ">
-                        <div class="modal-content p-2">
-                            <form>
-                                <div class="form-group">
-                                  <label for="newCatalogItem">Add New Catalog</label>
-                                  <input type="text" class="form-control" id="newCatalogItem" placeholder="Catalog names">
-                                </div>
-                               
-                                <button type="submit" id="addBookCatalogBtn" class="btn btn-warning btn-block">Add</button>
-                                <br/>
-                                <div class="alert alert-success" id="category-added-alert">
-                                    Category was added
-                                </div>
-                              </form>
+                    <div class="modal fade bd-example-modal-sm " id="modalBox" tabindex="-1" role="dialog"
+                        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm ">
+                            <div class="modal-content p-2">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="newCatalogItem">Add New Catalog</label>
+                                        <input type="text" class="form-control" id="newCatalogItem"
+                                            placeholder="Catalog names">
+                                    </div>
+
+                                    <button type="submit" id="addBookCatalogBtn"
+                                        class="btn btn-warning btn-block">Add</button>
+                                    <br />
+                                    <div class="alert alert-success" id="category-added-alert">
+                                        Category was added
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    
-                 
-                 
-                 
-                 <!-- Adding catalog ending -->
+
+
+
+
+                    <!-- Adding catalog ending -->
                     <div class="form-group">
                         <!-- <label for="exampleFormControlSelect1">Example select</label> -->
                         <select class="form-control" id="categories">
-                            
+
                         </select>
                     </div>
                     <button class="button" id="bookFormBtn">Add</button>
@@ -171,15 +226,17 @@
                 <h2>About Store</h2>
                 <div class="form-group">
                     <label for="bookTitle">Title</label>
-                    <input type="text" class="form-control" id="bookTitle">
+                    <input type="text" class="form-control" id="bookTitle" placeholder="Team-3">
                 </div>
                 <div class="form-group">
                     <label for="bookImageUrl">Book Image Url </label>
-                    <input type="text" class="form-control" id="bookImageUrl">
+                    <input type="text" class="form-control" id="bookImageUrl"
+                        placeholder="https://imgur.com/myCover.png">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control" id="bookDescription" rows="2"></textarea>
+                    <textarea class="form-control" id="bookDescription" rows="2"
+                        placeholder="Team-3's Book Store"></textarea>
                 </div>
                 <button class="button" id="aboutStoreBtn">Add about info</button>
             </div>
@@ -194,7 +251,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -211,7 +268,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -227,20 +284,20 @@
 
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-   
     <script src="./assets/js/db.js"></script>
     <!-- Header Js -->
     <script src="./assets/js/header.js"></script>
-
-    <!-- Contact Js -->
-    <script src="./assets/js/contact.js"></script>
-    <!-- Test for about store -->
-    <script src="./assets/js/about.js"></script>
+    <!-- admin.js -->
     <script src="./assets/js/admin.js"></script>
+    <!-- moment.js -->
+    <script src="./assets/js/moment.js"></script>
 
+<<<<<<< HEAD
 
     
     
+=======
+>>>>>>> f7ed2be01b5a03fb2f0b2b306f5efdd8a7f7cff1
 </body>
 
 </html>
