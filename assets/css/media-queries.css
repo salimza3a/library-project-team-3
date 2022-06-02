@@ -244,13 +244,26 @@
     #contact-us-items .form-row {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    #email{
+        margin-left: 9px !important;
     }
 
     #contact .container {
         padding-right: 25px !important;
+    }
+    #phone{
+        margin-left: 9px !important;
+    }
+    .iti__selected-flag{
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+    #contactUsBtn{
+        width: 100% !important;
     }
 }
 

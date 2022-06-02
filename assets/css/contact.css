@@ -43,13 +43,16 @@ input[type=submit]:active input[type=submit]:focus {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
 }
 
 #email {
     margin-left: 6px;
 }
 
-#phone{
+#phone {
     margin-left: 5px;
+}
+
+.iti__selected-flag {
+    padding-left: 18px;
 }
