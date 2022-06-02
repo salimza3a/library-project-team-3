@@ -1,4 +1,19 @@
-//fetch data from FireBase
+let isLoaded = false;
+
+function loadingCatalog(){
+    if(isLoaded === false){
+      $('.loading').css('display', 'flex');
+      return;
+    }else{
+      $('.loading').css('display', 'none');
+      clearInterval(catalogTimerID);
+      return;
+    }
+}
+
+let catalogTimerID = setInterval(loadingCatalog, 1);
+
+
 $(document).ready(function () {
   let categoriesBranch = database.ref('/categories');
   let booksBranch = database.ref('/books');
@@ -14,6 +29,7 @@ $(document).ready(function () {
   booksBranch.on('value', function (books) {
 
     let arr_book = Object.values(books.val());
+    isLoaded = true;
     $('.books').html('');
 
     $('.books').html(arr_book.map(item => `

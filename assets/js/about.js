@@ -1,3 +1,18 @@
+let isLoaded = false;
+
+function loadingAbout(){
+    if(isLoaded === false){
+      $('.loading').css('display', 'flex');
+      return;
+    }else{
+      $('.loading').css('display', 'none');
+      clearInterval(aboutLoadingTimer);
+      return;
+    }
+}
+
+let aboutLoadingTimer = setInterval(loadingAbout, 1);
+
 $(document).ready(function () {
     let aboutBranch = database.ref('/about_store');
     let aboutStoreInfo;
@@ -7,7 +22,7 @@ $(document).ready(function () {
     setTimeout(printDOM, 1300);
     
     function printDOM() {
-        console.log(aboutStoreInfo);
+        isLoaded = true;
         $('#about-container').html(
             `
             <div id="about-title">

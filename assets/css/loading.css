@@ -1,0 +1,28 @@
+.loading {
+    width: 200px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 200px auto;
+    z-index: 999;
+    user-select: none;
+}
+
+.loading-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px;
+}
