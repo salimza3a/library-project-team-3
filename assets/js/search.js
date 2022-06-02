@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 let books;
 let booksBranch = database.ref('/books');
 
@@ -142,4 +141,3 @@ $(document).ready(function () {
         }
     }
 });
->>>>>>> f7ed2be01b5a03fb2f0b2b306f5efdd8a7f7cff1

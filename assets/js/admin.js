@@ -314,10 +314,14 @@ $(document).ready(function () {
   $("#addBookCatalogBtn").on("click", addNewCatalogItem);
   let bookFormCatalogBranch = database.ref("/categories");
   $("#category-added-alert").hide();
-
+$("#category-warning-alert").hide()
   function addNewCatalogItem(e) {
     e.preventDefault();
     let newItem = $("#newCatalogItem").val();
+   if(newItem.trim() === "") {
+    $("#category-warning-alert").show();
+    return;
+   } else {
     $("#exampleFormControlSelect1").append(`<option value=""> ${newItem} </option>`);
 
     bookFormCatalogBranch.push().set({
@@ -326,8 +330,14 @@ $(document).ready(function () {
     newItem = $("#newCatalogItem").val("");
     setTimeout(() => $('.modal').click(), 800);
     $("#category-added-alert").show(200);
-  }
+    $("#category-warning-alert").hide();
 
+   }
+  }
+  
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
 
 
 
