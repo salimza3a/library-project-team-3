@@ -1,8 +1,6 @@
-// connect Db and fetch dates
+let aboutBranch = database.ref('/about');
 
-
-
-
-// Please separete these line codes below 
-// Please look at them when these codes work the image width happens like a default
+aboutBranch.on("value", function (snap) {
+    console.log(snap.val());
+});
 

@@ -262,7 +262,7 @@ $(document).ready(function () {
 
   $("#aboutStoreBtn").on("click", writeDatasToFirebase)
   // Please give an alert it  just works when user fill in forms completely
-  let aboutStoreBranch = database.ref("/about-store")
+  let aboutStoreBranch = database.ref("/about_store");
 
   function writeDatasToFirebase() {
     let bookTitle = $("#bookTitle").val();

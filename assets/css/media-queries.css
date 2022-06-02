@@ -124,6 +124,23 @@
         justify-content: center;
         align-items: center;
     }
+    #about-container{
+        margin-top: 190px;
+    }
+    #about-title{
+        display: none;
+    }
+    #about-title-mobile {
+        display: block !important;
+    }
+    #about-boxes{
+        flex-direction: column-reverse;
+    }
+    #about-boxes #content{
+        margin-right: 0 !important;
+        text-align: center;
+        margin-top: 60px;
+    }
 }
 
 /* mobile */
