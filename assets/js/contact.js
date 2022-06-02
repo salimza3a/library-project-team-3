@@ -11,9 +11,56 @@ function processForm(e) {
     let email = $("#email").val();
     let address = $("#address").val();
     let phone = $("#phone").val()
-    let failBox = 2;
-    
-    
+    const INTERVAL = 2300;
+    if (!fullName) {
+        $('#fullname').css({
+            border: '1px solid #ff0000'
+        });
+        $('#fullname').attr('placeholder', 'Requiered! Write a corrent Full Name');
+        setTimeout(() => {
+            $('#fullname').css({
+                border: '1px solid #ced4da'
+            });
+            $('#fullname').attr('placeholder', 'Full Name');
+        }, INTERVAL);
+        return;
+    } else if (!email) {
+        $('#email').css({
+            border: '1px solid #ff0000'
+        });
+        $('#email').attr('placeholder', 'Requiered! Write a corrent Email');
+        setTimeout(() => {
+            $('#email').css({
+                border: '1px solid #ced4da'
+            });
+            $('#email').attr('placeholder', 'Email');
+        }, INTERVAL);
+        return;
+    } else if (!address) {
+        $('#address').css({
+            border: '1px solid #ff0000'
+        });
+        $('#address').attr('placeholder', 'Requiered! Write a corrent Address');
+        setTimeout(() => {
+            $('#address').css({
+                border: '1px solid #ced4da'
+            });
+            $('#address').attr('placeholder', 'Address');
+        }, INTERVAL);
+        return;
+    } else if (!phone) {
+        $('#phone').css({
+            border: '1px solid #ff0000'
+        });
+        $('#phone').attr('placeholder', 'Requiered! Write a corrent Phone');
+        setTimeout(() => {
+            $('#phone').css({
+                border: '1px solid #ced4da'
+            });
+            $('#phone').attr('placeholder', 'Phone');
+        }, INTERVAL);
+        return;
+    }
 
     contactUsBranch.push().set({
         fullName,
@@ -25,7 +72,48 @@ function processForm(e) {
     fullName = $("#fullname").val("");
     email = $("#email").val("");
     address = $("#address").val("");
-    phone = $("#phone").val("")
+    phone = $("#phone").val("");
+
+    $('#fullname').css({
+        border: '1px solid #00ff00'
+    });
+    $('#fullname').attr('placeholder', 'OK');
+    setTimeout(() => {
+        $('#fullname').css({
+            border: '1px solid #ced4da'
+        });
+        $('#fullname').attr('placeholder', 'Full Name');
+    }, INTERVAL);
+    $('#email').css({
+        border: '1px solid #00ff00'
+    });
+    $('#email').attr('placeholder', 'OK');
+    setTimeout(() => {
+        $('#email').css({
+            border: '1px solid #ced4da'
+        });
+        $('#email').attr('placeholder', 'Email');
+    }, INTERVAL);
+    $('#address').css({
+        border: '1px solid #00ff00'
+    });
+    $('#address').attr('placeholder', 'OK');
+    setTimeout(() => {
+        $('#address').css({
+            border: '1px solid #ced4da'
+        });
+        $('#address').attr('placeholder', 'Address');
+    }, INTERVAL);
+    $('#phone').css({
+        border: '1px solid #00ff00'
+    });
+    $('#phone').attr('placeholder', 'OK');
+    setTimeout(() => {
+        $('#phone').css({
+            border: '1px solid #ced4da'
+        });
+        $('#phone').attr('placeholder', 'Phone');
+    }, INTERVAL);
 }
 
 
@@ -40,8 +128,8 @@ window.intlTelInput(input, {
 });
 
 function azPhone() {
-    if ($('#phone').attr('placeholder') === '040 123 45 67') {//wrong placeholder
-        $('#phone').attr('placeholder', '050 525 90 55');//true placeholder
+    if ($('#phone').attr('placeholder') === '040 123 45 67') { //wrong placeholder
+        $('#phone').attr('placeholder', '050 525 90 55'); //true placeholder
     }
 }
 setInterval(azPhone, 1);
