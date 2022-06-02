@@ -1,14 +1,14 @@
 let isLoaded = false;
 
-function loadingCatalog(){
-    if(isLoaded === false){
-      $('.loading').css('display', 'flex');
-      return;
-    }else{
-      $('.loading').css('display', 'none');
-      clearInterval(catalogTimerID);
-      return;
-    }
+function loadingCatalog() {
+  if (isLoaded === false) {
+    $('.loading').css('display', 'flex');
+    return;
+  } else {
+    $('.loading').css('display', 'none');
+    clearInterval(catalogTimerID);
+    return;
+  }
 }
 
 let catalogTimerID = setInterval(loadingCatalog, 1);
@@ -76,7 +76,7 @@ $(document).ready(function () {
   </div>
   `))
     });
-
+    
 
     $('.books').slick({
       prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
