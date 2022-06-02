@@ -12,7 +12,8 @@ function processForm(e) {
     let address = $("#address").val();
     let phone = $("#phone").val()
     let failBox = 2;
-    //checking.
+    
+    
 
     contactUsBranch.push().set({
         fullName,
