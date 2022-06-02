@@ -76,7 +76,7 @@ $(document).ready(function () {
   </div>
   `))
     });
-    
+
 
     $('.books').slick({
       prevArrow: `<button type="button" class="slick-prev"><img src="./assets/images/icons/next.svg"/></button>`,
@@ -150,21 +150,8 @@ $(document).ready(function () {
               </button>
           </form>
           <div class="comments">
-              <div class="comment">
-                  <div class="comment-header">
-                      <div class="comment-author">
-                          Anonymous
-                      </div>
-                      <div class="comment-date">
-                          13:32 today
-                      </div>
-                  </div>
-                  <div class="comment-content">
-                      Good Book
-                  </div>
-
-              </div>
-              ${fetchComments()}
+          
+              ${fetchComments(jsonData.image)}
           </div>
       </div>
   </div>
@@ -172,7 +159,10 @@ $(document).ready(function () {
       <img src="${jsonData.image}"
           id="detail-img" alt="Image">
   </div>`
-    )
+    );
+    $('#send-comment').on('click', function (e) {
+      fetchComments(jsonData.image, true, e);
+    })
   });
   $(document).on('click', '#close-details', function () {
     $('.footer-main-area').removeClass('container');
@@ -180,9 +170,57 @@ $(document).ready(function () {
     $('.books').css('opacity', '1');
   });
 
-  function fetchComments() {
-    return '' //...
+  function fetchComments(id, isPost, e) {
+
+
+    let IDIdx = id.indexOf('id');
+    IDIdx += 3;
+    let ID = id.substr(IDIdx, 12);
+
+    if (isPost === true) {
+      e.preventDefault();
+      let comment = $('#comment').val();
+      if (!comment) {
+        alert('write a normal comment');
+        return;
+      }
+      $.ajax({
+        url: `https://bloggy-api.herokuapp.com/posts/`,
+        method: 'POST',
+        data: {
+          "id": ID,
+          "comment": comment,
+          "date": 'Today'
+        }
+      })
+    }
+
+
+    $.ajax({
+      url: `https://bloggy-api.herokuapp.com/posts/${ID}`,
+      method: 'GET'
+    }).done((comments) => {
+      if (comments.length === 0) {
+        return '✋';
+      } else {
+        $('.comments').append(`
+        <div class="comment">
+        <div class="comment-header">
+            <div class="comment-author">
+                Anonymous
+            </div>
+            <div class="comment-date">
+                ${comments.date}
+            </div>
+        </div>
+        <div class="comment-content">
+            ${comments.comment}
+        </div>
+        </div>    
+        `);
+      }
+    });
+
+    return '';
   }
-
-
 });

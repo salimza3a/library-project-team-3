@@ -1,5 +1,37 @@
 /* tablets */
 @media screen and (max-width: 992px) {
+    .detail-image-area {
+        margin-left: 0 !important;
+        justify-content: center !important;
+        width: 100% !important;
+        position: absolute;
+        top: 220px;
+    }
+    #book-title,
+    #description,
+    #author{
+        text-align: center !important;
+    }
+    #close-details{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 0 !important;
+    }
+    #added-time{
+        display: none;
+    }
+    .detail-image-area img {
+        width: 273.64px !important;
+        height: 388px !important;
+    }
+
+    .book-details {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     #header nav {
         display: none;
     }
@@ -124,19 +156,24 @@
         justify-content: center;
         align-items: center;
     }
-    #about-container{
+
+    #about-container {
         margin-top: 190px;
     }
-    #about-title{
+
+    #about-title {
         display: none;
     }
+
     #about-title-mobile {
         display: block !important;
     }
-    #about-boxes{
+
+    #about-boxes {
         flex-direction: column-reverse;
     }
-    #about-boxes #content{
+
+    #about-boxes #content {
         margin-right: 0 !important;
         text-align: center;
         margin-top: 60px;
@@ -152,7 +189,7 @@
         text-align: start;
 
     }
-    
+
     .scroll-bar ul {
         height: 40px;
     }
@@ -210,10 +247,12 @@
     .social-bar-items {
         text-align: center;
     }
-    #book-title{
+
+    #book-title {
         text-align: center;
         width: 100% !important;
     }
+
     #result {
         flex-direction: column !important;
         width: 500px !important;
@@ -231,16 +270,19 @@
         width: 273.64px !important;
         height: 388px !important;
     }
-    #result-details{
+
+    #result-details {
         text-align: center;
     }
-    #results{
+
+    #results {
         width: 500px !important;
         height: 1100px !important;
         background-color: #FFF;
         position: relative;
     }
-    .slick-slider #book-desc{
+
+    .slick-slider #book-desc {
         width: 450px !important;
         position: absolute;
         bottom: -450px;
@@ -265,21 +307,25 @@
         flex-direction: column;
         flex-wrap: wrap;
     }
-    #email{
+
+    #email {
         margin-left: 9px !important;
     }
 
     #contact .container {
         padding-right: 25px !important;
     }
-    #phone{
+
+    #phone {
         margin-left: 9px !important;
     }
-    .iti__selected-flag{
+
+    .iti__selected-flag {
         border-radius: 10px;
         padding-left: 20px;
     }
-    #contactUsBtn{
+
+    #contactUsBtn {
         width: 100% !important;
     }
 }
@@ -309,8 +355,9 @@
     }
 
 }
+
 @media screen and (max-width: 400px) {
-    #result{
+    #result {
         width: auto !important;
         overflow-x: hidden;
     }
