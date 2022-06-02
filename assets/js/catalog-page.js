@@ -162,7 +162,7 @@ $(document).ready(function () {
     );
     $('#send-comment').on('click', function (e) {
       fetchComments(jsonData.image, true, e);
-    })
+    });
   });
   $(document).on('click', '#close-details', function () {
     $('.footer-main-area').removeClass('container');
@@ -203,7 +203,7 @@ $(document).ready(function () {
       if (comments.length === 0) {
         return '✋';
       } else {
-        $('.comments').append(`
+        $('.comments').html(`
         <div class="comment">
         <div class="comment-header">
             <div class="comment-author">
@@ -218,6 +218,21 @@ $(document).ready(function () {
         </div>
         </div>    
         `);
+        $('.comments').prepend(`
+        <form class="send-comment-area" style="margin-bottom:30px">
+        <input type="text" id="comment" required placeholder="Write a public comment">
+        <button type="submit" id="send-comment">
+            <img src="./assets/images/icons/comment.svg" alt="comment">
+        </button>
+        </form>
+
+        `);
+        let jsData = jsonData.image;
+        console.log(jsData);
+        $('#send-comment').on('click', function (e) {
+          fetchComments(jsData, true, e);
+          //window.location.reload();
+        });
       }
     });
 
