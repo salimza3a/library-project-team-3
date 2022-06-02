@@ -223,7 +223,7 @@
         background-color: #FFF;
         position: relative;
     }
-    #book-desc{
+    .slick-slider #book-desc{
         width: 450px !important;
         position: absolute;
         bottom: -450px;

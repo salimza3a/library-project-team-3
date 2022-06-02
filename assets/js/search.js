@@ -5,35 +5,29 @@ booksBranch.on("value", function (snap) {
     books = Object.values(snap.val());
 });
 
-
 //slick slider bug, so first search when slick slider working perfect but second search when slick slider occurred(crashed).
-let lastSearchBookName;
+function lastSearchBook(){
+    let itemName = localStorage.getItem('last-bookname');
 
-function lastSearchBook(bookname, isSecond) {
-    let itemName = `${localStorage.getItem('last-bookname')}`;
-
-    if (isSecond === true) {
-        localStorage.setItem('last-bookname', bookname);
-        window.location.reload();
+    if(itemName === null){
+        localStorage.setItem('last-bookname', '');
         return;
-    }
-    if (itemName === null) {
-        localStorage.setItem('last-bookname', 'bookName');
-        return;
-    }
-    if(itemName !== null){
+    }else{
         setTimeout(() => {
             $('#book-name').val(itemName);
             $('#search-book-name-btn').click();
-        }, 1600);
+        },1500);
     }
-
 }
-
 lastSearchBook();
 
+function saveLastBookName(bookName){
+    localStorage.setItem('last-bookname', bookName);
+    window.location.reload();
+}
+
 $(document).ready(function () {
-    let printCount = 0;
+    let slickWorkCount = 0;
 
     function initSlider() {
         $('#results').slick({
@@ -74,7 +68,6 @@ $(document).ready(function () {
             }, 1800);
             return;
         } else if (books === undefined) {
-            alert('wait')
             return;
         }
 
@@ -121,7 +114,7 @@ $(document).ready(function () {
             return;
         } else {
             $('#results').html('');
-            printCount === 1 ? lastSearchBook(bookTitle, true) : '';
+            slickWorkCount++;
             $('#results').html(results.map(book =>
                 ` 
                 <div id="result">
@@ -142,10 +135,8 @@ $(document).ready(function () {
                     </div>
                 </div> 
             `));
+            slickWorkCount === 2 ? saveLastBookName(bookTitle) : '';
             initSlider();
-            printCount++;
-            console.log(printCount);
-            return;
         }
     }
 });

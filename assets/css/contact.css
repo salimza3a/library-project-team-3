@@ -22,14 +22,34 @@ input {
     border: 1px solid #CECECE;
     margin: 10px;
 }
-input[type=submit]{
+
+input[type=submit] {
     background-color: var(--color-orange);
     color: var(--color-white);
     margin-top: 42px;
 }
 
-input[type=submit]:active
-input[type=submit]:focus{
+input[type=submit]:active input[type=submit]:focus {
     background-color: var(--color-orange);
-    background-color:none;
+    background-color: none;
+}
+
+
+.iti.iti--allow-dropdown {
+    width: 100%
+}
+
+.phone-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+#email {
+    margin-left: 6px;
+}
+
+#phone{
+    margin-left: 5px;
 }
