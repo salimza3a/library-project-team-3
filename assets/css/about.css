@@ -36,3 +36,11 @@ main {
     max-width: 100%;
 }
 
+#about-title-mobile {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 196.19%;
+    text-align: center;
+    display: none;
+}

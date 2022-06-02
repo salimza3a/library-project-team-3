@@ -7,11 +7,14 @@ let contactUsBranch = database.ref("/contact_us")
 
 function processForm(e) {
     e.preventDefault();
-    let fullName = $("#fullname").val();
-    let email = $("#email").val();
-    let address = $("#address").val();
-    let phone = $("#phone").val()
+    let fullName = $("#fullname").val().trim();
+    let email = $("#email").val().trim();
+    let address = $("#address").val().trim();
+    let phone = $("#phone").val().trim();
+
     const INTERVAL = 2300;
+
+
     if (!fullName) {
         $('#fullname').css({
             border: '1px solid #ff0000'
