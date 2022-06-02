@@ -259,16 +259,31 @@ $(document).ready(function () {
 
 
   // About Store Part
-
   $("#aboutStoreBtn").on("click", writeDatasToFirebase)
-  // Please give an alert it  just works when user fill in forms completely
   let aboutStoreBranch = database.ref("/about_store");
 
   function writeDatasToFirebase() {
     let bookTitle = $("#bookTitle").val();
     let bookImageUrl = $("#bookImageUrl").val();
     let bookDescription = $("#bookDescription").val();
-    console.log(bookTitle, bookImageUrl, bookDescription)
+
+    if (!bookTitle) {
+      messageBox('bookTitle', 'red', true);
+      return;
+    } else if (!bookImageUrl) {
+      messageBox('bookImageUrl', 'red', true);
+      return;
+    } else if (!bookDescription) {
+      messageBox('bookDescription', 'red', true);
+      return;
+    }
+
+    function messageBox(inputAddress, color, isFailed) {
+      $(`#${inputAddress}`).css('border-color', color);
+      $(`#${inputAddress}`).attr('placeholder', isFailed ? 'Empty!' : 'OK, SUCCESS');
+      setTimeout(() => ($(`#${inputAddress}`).css('border-color', '#ced4da')), 1500);
+    }
+
     aboutStoreBranch.update({
       bookTitle,
       bookImageUrl,
@@ -277,6 +292,8 @@ $(document).ready(function () {
     bookTitle = $("#bookTitle").val("");
     bookImageUrl = $("#bookImageUrl").val("");
     bookDescription = $("#bookDescription").val("");
+    let items = ['bookTitle', 'bookImageUrl', 'bookDescription'];
+    items.map(item => messageBox(item, 'green', false));
   }
 
 
@@ -317,76 +334,36 @@ $(document).ready(function () {
     let addBookDescription = $("#searchDescription").val();
     let addBookCategory = $("#categories").val();
 
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    if (!addBookName) {
+      printErrorMsg('bookName');
       return;
-    }
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    } else if (!addBookAuthor) {
+      printErrorMsg('authorName');
       return;
-    }
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    } else if (!addBookImg) {
+      printErrorMsg('imageUrl');
       return;
-    }
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    } else if (!addBookPublicationYear) {
+      printErrorMsg('publicationYear');
       return;
-    }
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    } else if (!addIsNew) {
+      printErrorMsg('searchDescription');
       return;
-    }
-    if (addBookName === '') {
-      $('#bookName').attr("placeholder", "Empty!");
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
-      return;
-    }
-    if (addBookName === '') {
-      $('#bookName').css('border-color', 'red');
-      $('#book-added-alert').removeClass('alert-success');
-      $("#book-added-alert").html('Please full fill inputs')
-      $('#book-added-alert').addClass('alert-danger');
-      $('#book-added-alert').fadeIn(500);
-      $('#book-added-alert').fadeOut(500);
+    } else if (!addBookCategory) {
+      printErrorMsg('categories');
       return;
     }
 
+    function printErrorMsg(inputAddress) {
+      $(`#${inputAddress}`).attr("placeholder", "Empty!");
+      $(`#${inputAddress}`).css('border-color', 'red');
+      setTimeout(() => ($(`#${inputAddress}`).css('border-color', '#ced4da')), 1500);
+      $('#book-added-alert').removeClass('alert-success');
+      $("#book-added-alert").html('Please full fill inputs')
+      $('#book-added-alert').addClass('alert-danger');
+      $('#book-added-alert').fadeIn(1000);
+      $('#book-added-alert').fadeOut(1000);
+    }
 
     bookFormBranch.push().set({
       "name": addBookName,
